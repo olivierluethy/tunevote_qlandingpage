@@ -546,7 +546,7 @@
     </style>
 
     <script>
-        const publicSocket = io("http://localhost:4000", {
+        const publicSocket = io("https://api.tunevote.com", {
             autoConnect: true,
             reconnection: true,
             reconnectionAttempts: Infinity,
@@ -588,7 +588,7 @@
 
         async function handleJoinSession() {
             try {
-                const res = await fetch("http://localhost:4000/join");
+                const res = await fetch("https://api.tunevote.com/join");
                 const data = await res.json();
                 if (data.redirect) {
                     window.location.href = data.redirect;
@@ -607,7 +607,7 @@
         // Top Artists
         async function fetchTopArtists() {
             try {
-                const res = await fetch("http://localhost:4000/top-today");
+                const res = await fetch("https://api.tunevote.com/top-today");
                 const data = await res.json();
                 updateTopArtists(data);
             } catch (err) {
@@ -658,7 +658,7 @@
         // Top Weekly Songs
         async function fetchTopWeeklySongs() {
             try {
-                const res = await fetch("http://localhost:4000/top-weekly-songs");
+                const res = await fetch("https://api.tunevote.com/top-weekly-songs");
                 const data = await res.json();
                 updateTopWeeklySongs(data);
             } catch (err) {
