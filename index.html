@@ -3,34 +3,42 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TuneVote</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#A855F7" />
+        <title>TuneVote - Collaborative Music Voting App for Parties & Groups</title>
         <!-- Nach Zeile: <title>TuneVote</title> -->
         <meta
             name="description"
-            content="TuneVote – Die kollaborative Musik-App: Erstelle Sessions, lass Freunde Songs vorschlagen und per Voting entscheiden, was als Nächstes gespielt wird. Perfekt für Partys, Road Trips und Workouts."
+            content="TuneVote: The best collaborative music voting app. Create sessions, suggest songs, and let friends vote democratically on what plays next. Ideal for parties, road trips, workouts, and DJs."
         />
         <meta
             name="keywords"
-            content="kollaborative Playlist, Musik Voting, Party Musik App, demokratische Playlist, gemeinsame Musiksession, TuneVote"
+            content="collaborative playlist, music voting, party music app, democratic playlist, shared music session, TuneVote"
         />
 
         <!-- Open Graph / Social Sharing -->
-        <meta property="og:title" content="TuneVote – Musik demokratisch abspielen" />
+        <meta property="og:title" content="TuneVote – Play music democratically" />
         <meta
             property="og:description"
-            content="Erstelle eine Session und lass alle mitvoten, welcher Song als Nächstes kommt. Perfekt für Partys, Autofahrten und Sport."
+            content="Create a session and let everyone vote on which song comes next. Perfect for parties, car rides, and sports."
         />
         <meta property="og:image" content="https://tunevote.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="TuneVote collaborative music voting app – perfect for parties and groups"
+        />
         <!-- Erstelle ein 1200x630 Bild! -->
         <meta property="og:url" content="https://tunevote.com" />
         <meta property="og:type" content="website" />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="TuneVote – Musik demokratisch abspielen" />
+        <meta name="twitter:title" content="TuneVote – Play music democratically" />
         <meta
             property="twitter:description"
-            content="Erstelle eine Session und lass alle mitvoten, welcher Song als Nächstes kommt."
+            content="Create a session and let everyone vote on which song comes next."
         />
         <meta name="twitter:image" content="https://tunevote.com/og-image.jpg" />
 
@@ -49,12 +57,36 @@
                     "@type": "Offer",
                     "price": "0"
                 },
-                "description": "Kollaborative Musik-Sessions mit Live-Voting"
+                "description": "Collaborative music sessions with live voting"
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is TuneVote?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "TuneVote is a collaborative music platform where friends can create or join sessions, suggest songs, and vote in real-time on what plays next..."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need a Spotify or YouTube account?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No, you don't need any of these accounts..."
+                        }
+                    }
+                ]
             }
         </script>
         <link rel="icon" type="image/x-icon" href="icon.png" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+        <script defer src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
 
         <!-- Google Tag Manager -->
         <!-- Google tag (gtag.js) -->
@@ -112,13 +144,17 @@
         <nav class="fixed top-0 w-full z-50 backdrop-blur-lg bg-black/20 border-b border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
-                    <a href="/" class="flex items-center space-x-2">
-                        <!-- Music Icon -->
-                        <img src="icon.png" alt="TuneVote Logo" class="w-8 h-8 object-contain">
+                    <a href="/" class="flex items-center space-x-2 group transition-transform duration-300">
+                        <img
+                            src="icon.png"
+                            alt="TuneVote - Collaborative Music Voting App Logo"
+                            class="w-12 h-12 object-contain transition-all group-hover:scale-110 group-hover:rotate-3"
+                        />
                         <span
-                            class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-                            >TuneVote</span
+                            class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:brightness-125 transition-all"
                         >
+                            TuneVote
+                        </span>
                     </a>
                     <div class="flex space-x-4">
                         <a
@@ -149,6 +185,9 @@
                     >
                         TuneVote
                     </h1>
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-gray-200">
+                        The Collaborative Music Voting App for Parties, Road Trips & Workouts
+                    </h2>
                     <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
                         Collaborative Music Sessions – Vote, Play, Enjoy.
                     </p>
@@ -296,7 +335,7 @@
                         <tbody id="top-artists-tbody"></tbody>
                     </table>
                     <div id="top-artists-empty" class="py-20 text-center text-gray-500 hidden">
-                        Noch keine Votes heute – seid die Ersten! 🎵
+                        No votes yet today – be the first! 🎵
                     </div>
                 </div>
             </div>
@@ -318,21 +357,13 @@
                         <h3 class="font-semibold text-lg">Top Songs Of The Week 🔥</h3>
                         <span class="text-xs text-green-400 animate-pulse">● LIVE</span>
                     </div>
-                    <table class="min-w-full border-collapse">
-                        <thead>
-                            <tr class="border-b border-white/10 text-left text-sm text-gray-400">
-                                <th class="px-6 py-3 text-center">#</th>
-                                <th class="px-6 py-3">Song</th>
-                                <th class="px-6 py-3">Artist</th>
-                            </tr>
-                        </thead>
-                    </table>
+                    <table class="min-w-full border-collapse"></table>
                     <div class="w-full h-64 flex items-center justify-center" id="top-weekly-songs-loading">
                         <div class="flex flex-col items-center gap-4">
                             <div
                                 class="w-8 h-8 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"
                             ></div>
-                            <p class="text-gray-400 animate-pulse">Lade wöchentliche Charts...</p>
+                            <p class="text-gray-400 animate-pulse">Download weekly charts...</p>
                         </div>
                     </div>
                     <table class="min-w-full border-collapse hidden" id="top-weekly-songs-table">
@@ -693,7 +724,15 @@
                             >
                                 <img
                                     src="https://upload.wikimedia.org/wikipedia/commons/a/a0/The_Weeknd_Portrait_by_Brian_Ziff.jpg"
-                                    alt=“The Weeknd – currently the leading artist on TuneVote”
+                                    alt="The Weeknd – currently leading artist on TuneVote with 89 votes"
+                                    Weeknd
+                                    –
+                                    currently
+                                    the
+                                    leading
+                                    artist
+                                    on
+                                    TuneVote”
                                     class="w-12 h-12 rounded-lg"
                                     loading="lazy"
                                 />
@@ -712,7 +751,7 @@
                             >
                                 <img
                                     src="https://upload.wikimedia.org/wikipedia/commons/7/72/DuaLipa-byPhilipRomano.jpg"
-                                    alt="Levitating"
+                                    alt="Dua Lipa – popular song 'Levitating' in TuneVote DJ dashboard"
                                     class="w-12 h-12 rounded-lg"
                                     loading="lazy"
                                 />
@@ -731,7 +770,7 @@
                             >
                                 <img
                                     src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Glasto2025-546_%28cropped%29_%282%29.jpg"
-                                    alt="Good 4 U"
+                                    alt="Olivia Rodrigo – 'Good 4 U' voted track in TuneVote preview"
                                     class="w-12 h-12 rounded-lg"
                                     loading="lazy"
                                 />
@@ -858,7 +897,10 @@
 
                 <div class="max-w-4xl mx-auto space-y-8">
                     <!-- Question 1 -->
-                    <details class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
+                    <details
+                        class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden"
+                        onclick="this.open && trackEvent('faq_open', 'FAQ Interaction', 'What is TuneVote?')"
+                    >
                         <summary
                             class="px-8 py-6 cursor-pointer flex justify-between items-center hover:bg-white/10 transition-all"
                         >
@@ -888,7 +930,10 @@
                     </details>
 
                     <!-- Question 2 -->
-                    <details class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
+                    <details
+                        class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden"
+                        onclick="this.open && trackEvent('faq_open', 'FAQ Interaction', 'Do I need a Spotify or YouTube account?')"
+                    >
                         <summary
                             class="px-8 py-6 cursor-pointer flex justify-between items-center hover:bg-white/10 transition-all"
                         >
@@ -918,7 +963,10 @@
                     </details>
 
                     <!-- Question 3 -->
-                    <details class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
+                    <details
+                        class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden"
+                        onclick="this.open && trackEvent('faq_open', 'FAQ Interaction', 'Is TuneVote free to use?')"
+                    >
                         <summary
                             class="px-8 py-6 cursor-pointer flex justify-between items-center hover:bg-white/10 transition-all"
                         >
@@ -948,7 +996,10 @@
                     </details>
 
                     <!-- Question 4 -->
-                    <details class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
+                    <details
+                        class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden"
+                        onclick="this.open && trackEvent('faq_open', 'FAQ Interaction', 'How does voting work?')"
+                    >
                         <summary
                             class="px-8 py-6 cursor-pointer flex justify-between items-center hover:bg-white/10 transition-all"
                         >
@@ -978,7 +1029,10 @@
                     </details>
 
                     <!-- Question 5 -->
-                    <details class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
+                    <details
+                        class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden"
+                        onclick="this.open && trackEvent('faq_open', 'FAQ Interaction', 'Can I use TuneVote for parties, road trips, or workouts?')"
+                    >
                         <summary
                             class="px-8 py-6 cursor-pointer flex justify-between items-center hover:bg-white/10 transition-all"
                         >
@@ -1010,7 +1064,10 @@
                     </details>
 
                     <!-- Question 6 -->
-                    <details class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
+                    <details
+                        class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden"
+                        onclick="this.open && trackEvent('faq_open', 'FAQ Interaction', 'How can artists or DJs earn money with TuneVote?')"
+                    >
                         <summary
                             class="px-8 py-6 cursor-pointer flex justify-between items-center hover:bg-white/10 transition-all"
                         >
@@ -1040,7 +1097,10 @@
                     </details>
 
                     <!-- Question 7 -->
-                    <details class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
+                    <details
+                        class="group bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden"
+                        onclick="this.open && trackEvent('faq_open', 'FAQ Interaction', 'Still have questions?')"
+                    >
                         <summary
                             class="px-8 py-6 cursor-pointer flex justify-between items-center hover:bg-white/10 transition-all"
                         >
@@ -1063,9 +1123,9 @@
                         <div class="px-8 pb-6 text-gray-300">
                             <p>
                                 Feel free to reach out to us at
-                                <a href="mailto:support@tunevote.com" class="text-purple-400 hover:underline"
-                                    >support@tunevote.com</a
-                                >
+                                <a href="mailto:support@tunevote.com" class="text-purple-400 hover:underline">
+                                    support@tunevote.com
+                                </a>
                                 or join our community on Discord. We're happy to help!
                             </p>
                         </div>
@@ -1429,16 +1489,18 @@
         </script>
 
         <!-- Direkt vor </footer> einfügen -->
-<section class="py-20 px-4 text-center">
-    <h2 class="text-5xl font-bold mb-6">Ready to democratize your playlist?</h2>
-    <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="https://app.tunevote.com/dashboard" 
-           onclick="trackEvent('click_start_session', 'CTA', 'Final Section')"
-           class="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-purple-500/50 transition-all">
-            Start Your Session Now
-        </a>
-    </div>
-</section>
+        <section class="py-20 px-4 text-center">
+            <h2 class="text-5xl font-bold mb-6">Ready to democratize your playlist?</h2>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a
+                    href="https://app.tunevote.com/dashboard"
+                    onclick="trackEvent('click_start_session', 'CTA', 'Final Section')"
+                    class="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-purple-500/50 transition-all"
+                >
+                    Start Your Session Now
+                </a>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer class="bg-black/50 backdrop-blur border-t border-white/10 py-12 px-4">
@@ -1446,7 +1508,11 @@
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="flex items-center space-x-2 mb-4 md:mb-0">
                         <!-- Music Icon -->
-                        <img src="icon.png" alt="TuneVote Logo" class="w-8 h-8 object-contain">
+                        <img
+                            src="icon.png"
+                            alt="TuneVote - Collaborative Music Voting App Logo"
+                            class="w-12 h-12 object-contain transition-all group-hover:scale-110 group-hover:rotate-3"
+                        />
                         <span
                             class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
                             >TuneVote</span
@@ -1455,7 +1521,13 @@
                 </div>
 
                 <div class="mt-8 pt-8 border-t border-white/10 text-center text-sm text-gray-400">
-                    <p>© 2025 TuneVote. All rights reserved. <a href="#" class="underline">Privacy Policy</a></p>
+                    <p>
+                        ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        TuneVote. All rights reserved. <a href="#" class="underline">Privacy Policy</a>
+                    </p>
                 </div>
             </div>
         </footer>
@@ -1644,7 +1716,7 @@
                     if (data.redirect) {
                         window.location.href = data.redirect;
                     } else {
-                        alert(data.error || "Keine aktive Session gefunden.");
+                        alert(data.error || "No active session found.");
                     }
                 } catch (err) {
                     console.error("Fehler beim Beitritt:", err);
@@ -1690,9 +1762,6 @@
                                 </div>
                                 <span class="font-semibold text-gray-100 group-hover:text-purple-400 transition-colors">${artist.artist_name}</span>
                             </div>
-                        </td>
-                        <td class="px-6 py-4 text-right">
-                            <span class="font-mono font-bold text-purple-300 animate-scale">${artist.vote_count.toLocaleString()}</span>
                         </td>
                     `;
                         tbody.appendChild(tr);
@@ -1744,9 +1813,6 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 text-gray-300">${song.artist_name}</td>
-                        <td class="px-6 py-4 text-right">
-                            <span class="font-mono font-bold text-purple-300 animate-scale">${song.queue_count}</span>
-                        </td>
                     `;
                         tbody.appendChild(tr);
                     });
@@ -1795,8 +1861,3 @@
         </script>
     </body>
 </html>
-
-<!-- 
-- Remove the numbers from the rankings
-- Optimize all of the points given by Grok
--->
