@@ -308,238 +308,426 @@
         </section>
 
         <!-- Popular Active Sessions – Hardcoded Demo Version -->
-        <section class="py-20 px-4 bg-gradient-to-b from-black/40 via-purple-950/20 to-black relative overflow-hidden">
-            <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(168,85,247,0.12),transparent_40%)] pointer-events-none"
-            ></div>
+        <!-- Popular Active Sessions – Slider -->
+<!-- Popular Active Sessions – Slider -->
+<section class="py-20 px-4 bg-gradient-to-b from-black/40 via-purple-950/20 to-black relative overflow-hidden">
+  <div class="max-w-7xl mx-auto relative z-10">
 
-            <div class="max-w-7xl mx-auto relative z-10">
-                <div class="text-center mb-16 animate-fade-in">
-                    <h2
-                        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"
-                    >
-                        Live sessions currently active 🔥
-                    </h2>
-                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                        More and more music lovers are creating live sessions – jump in early and help shape the
-                        ultimate collaborative playlist!
-                    </p>
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+        Live sessions currently active 🔥
+      </h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        More and more music lovers are creating live sessions – jump in early and help shape the playlist.
+      </p>
+    </div>
+
+    <!-- Slider -->
+    <div class="relative">
+
+      <!-- Viewport -->
+      <div class="overflow-hidden">
+        <div id="slider" class="flex transition-transform duration-500 ease-out">
+
+          <!-- ===== SLIDE 1 (Sessions 1–6) ===== -->
+          <div class="min-w-full px-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              <!-- Session 1 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
                 </div>
-
-                <!-- Sessions Grid – Hardcoded -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    <!-- Session 1 -->
-                    <div
-                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
-                    >
-                        <div
-                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
-                        >
-                            <div class="relative">
-                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
-                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-                            </div>
-                            <span>LIVE</span>
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
-                            Midnight Neon Drive 🌌
-                        </h3>
-
-                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
-                            <p class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                    />
-                                </svg>
-                                <span>Vibes: Synthwave • Driving • Late Night</span>
-                            </p>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <a
-                                data-name="Midnight Neon Drive 🌌"
-                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
-                            >
-                                Join Now
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Session 2 -->
-                    <div
-                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
-                    >
-                        <div
-                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
-                        >
-                            <div class="relative">
-                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
-                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-                            </div>
-                            <span>LIVE</span>
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
-                            Sunset House Party ☀️🍹
-                        </h3>
-
-                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
-                            <p class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                                    />
-                                </svg>
-                                <span>Vibes: Tropical House • Sunset • Cocktails</span>
-                            </p>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <a
-                                data-name="Sunset House Party ☀️🍹"
-                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
-                            >
-                                Join Now
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Session 3 -->
-                    <div
-                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
-                    >
-                        <div
-                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
-                        >
-                            <div class="relative">
-                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
-                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-                            </div>
-                            <span>LIVE</span>
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
-                            90s Throwback Rave 🕹️✨
-                        </h3>
-
-                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
-                            <p class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    />
-                                </svg>
-                                <span>Vibes: 90s Dance • Eurodance • Nostalgia</span>
-                            </p>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <a
-                                data-name="90s Throwback Rave 🕹️✨"
-                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
-                            >
-                                Join Now
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Session 4 -->
-                    <div
-                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
-                    >
-                        <div
-                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
-                        >
-                            <div class="relative">
-                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
-                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-                            </div>
-                            <span>LIVE</span>
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
-                            Epic Gym Motivation Session 💪🔥
-                        </h3>
-
-                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
-                            <p class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    />
-                                </svg>
-                                <span>Vibes: Trap • EDM • Workout • Hype</span>
-                            </p>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <a
-                                data-name="Epic Gym Motivation Session 💪🔥"
-                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
-                            >
-                                Join Now
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Session 5 -->
-                    <div
-                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
-                    >
-                        <div
-                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
-                        >
-                            <div class="relative">
-                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
-                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-                            </div>
-                            <span>LIVE</span>
-                        </div>
-
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
-                            Candlelight Indie & Chill 🌙
-                        </h3>
-
-                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
-                            <p class="flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                    />
-                                </svg>
-                                <span>Vibes: Indie Folk • Lo-Fi • Relaxed</span>
-                            </p>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <a
-                                data-name="Candlelight Indie & Chill 🌙"
-                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
-                            >
-                                Join Now
-                            </a>
-                        </div>
-                    </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Midnight Neon Drive 🌌✨
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Synthwave • Retro-futurism • Night drive</span>
+                  </p>
                 </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Midnight Neon Drive 🌌✨" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 2 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Sunset House Party ☀️🍹
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Tropical House • Deep House • Summer</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Sunset House Party ☀️🍹" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 3 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  90s Throwback Rave 🕹️✨
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: 90s Dance • Eurodance • Nostalgia</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="90s Throwback Rave 🕹️✨" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 4 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Epic Gym Motivation 💪🏋️
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Trap • Hip-Hop • Workout • Hype</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Epic Gym Motivation 💪🏋️" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 5 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Late Night Jazz Lounge 🎷🌙
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Jazz • Neo-soul • Smooth • Night</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Late Night Jazz Lounge 🎷🌙" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 6 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Lo-Fi Coding & Rain ☕🌧️
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Lo-Fi • Chillhop • Study • Focus</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Lo-Fi Coding & Rain ☕🌧️" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
             </div>
-        </section>
+          </div>
+
+          <!-- ===== SLIDE 2 (Sessions 7–12) ===== -->
+          <div class="min-w-full px-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              <!-- Session 7 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Chillhop Beats & Coffee 🌿☕
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Chillhop • Jazzhop • Relax • Morning</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Chillhop Beats & Coffee 🌿☕" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 8 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Hard Techno Warehouse ⚡🖤
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Techno • Industrial • Dark • Energy</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Hard Techno Warehouse ⚡🖤" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 9 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Indie Focus & Dream Pop 🎧🌫️
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Indie • Dream Pop • Shoegaze • Chill</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Indie Focus & Dream Pop 🎧🌫️" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 10 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Morning Energy Boost 🌅⚡
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: House • Disco • Uplifting • Morning</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Morning Energy Boost 🌅⚡" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 11 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Trap Night Kings 🔥👑
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Trap • Drill • Hip-Hop • Night</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Trap Night Kings 🔥👑" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+              <!-- Session 12 -->
+              <div class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden">
+                <div class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg">
+                  <div class="relative">
+                    <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                    <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                  </div>
+                  <span>LIVE</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                  Deep House Afterhours 🖤🌃
+                </h3>
+                <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                  <p class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Vibes: Deep House • Melodic Techno • Night</span>
+                  </p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <a data-name="Deep House Afterhours 🖤🌃" class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all">
+                    Join Now
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex justify-center gap-6 mt-10">
+        <button id="prev"
+          class="px-8 py-3 rounded-xl font-semibold bg-white/10 hover:bg-white/20 disabled:opacity-40 disabled:cursor-not-allowed">
+          Back
+        </button>
+        <button id="next"
+          class="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed">
+          Next
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Slider Elemente
+  const slider = document.getElementById("slider");
+  const slides = slider.children;
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
+  // Aktuelle Slide
+  let current = 0;
+  const total = slides.length;
+
+  // Funktion: Slider aktualisieren
+  function updateSlider() {
+    slider.style.transform = `translateX(-${current * 100}%)`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === total - 1;
+  }
+
+  // Klick Events
+  prevBtn.addEventListener("click", () => {
+    if (current > 0) {
+      current--;
+      updateSlider();
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (current < total - 1) {
+      current++;
+      updateSlider();
+    }
+  });
+
+  // Initial Update
+  updateSlider();
+
+  // Optional: Resize Event, falls du später dynamische Breiten nutzen willst
+  window.addEventListener("resize", updateSlider);
+</script>
+
+
 
         <!-- Top Artists Today -->
         <section class="py-20 px-4 bg-gradient-to-b from-black to-black/30">
