@@ -7,7 +7,10 @@
         <meta name="theme-color" content="#A855F7" />
         <title>TuneVote - Collaborative Music Voting App for Parties & Groups</title>
         <!-- Nach Zeile: <title>TuneVote</title> -->
-        <meta name="description" content="TuneVote: The best collaborative music voting app. Create sessions, suggest songs, and let friends vote democratically on what plays next. Ideal for parties, road trips, workouts, and DJs." />
+        <meta
+            name="description"
+            content="TuneVote: The best collaborative music voting app. Create sessions, suggest songs, and let friends vote democratically on what plays next. Ideal for parties, road trips, workouts, and DJs."
+        />
         <meta
             name="keywords"
             content="collaborative playlist, music voting, party music app, democratic playlist, shared music session, TuneVote"
@@ -22,7 +25,10 @@
         <meta property="og:image" content="https://tunevote.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="TuneVote collaborative music voting app – perfect for parties and groups" />
+        <meta
+            property="og:image:alt"
+            content="TuneVote collaborative music voting app – perfect for parties and groups"
+        />
         <!-- Erstelle ein 1200x630 Bild! -->
         <meta property="og:url" content="https://tunevote.com" />
         <meta property="og:type" content="website" />
@@ -55,29 +61,29 @@
             }
         </script>
         <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is TuneVote?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "TuneVote is a collaborative music platform where friends can create or join sessions, suggest songs, and vote in real-time on what plays next..."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a Spotify or YouTube account?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, you don't need any of these accounts..."
-      }
-    }
-  ]
-}
-</script>
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What is TuneVote?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "TuneVote is a collaborative music platform where friends can create or join sessions, suggest songs, and vote in real-time on what plays next..."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need a Spotify or YouTube account?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No, you don't need any of these accounts..."
+                        }
+                    }
+                ]
+            }
+        </script>
         <link rel="icon" type="image/x-icon" href="icon.png" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
@@ -152,7 +158,7 @@
                     </a>
                     <div class="flex space-x-4">
                         <a
-                            href="https://app.tunevote.com/dashboard"
+                            href="http://localhost:5173/dashboard"
                             onclick="trackEvent('click_start_session', 'CTA', 'Navigation Bar')"
                             class="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
                             >Start Session</a
@@ -179,13 +185,15 @@
                     >
                         TuneVote
                     </h1>
-                    <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-gray-200">The Collaborative Music Voting App for Parties, Road Trips & Workouts</h2>
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-gray-200">
+                        The Collaborative Music Voting App for Parties, Road Trips & Workouts
+                    </h2>
                     <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
                         Collaborative Music Sessions – Vote, Play, Enjoy.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                         <a
-                            href="https://app.tunevote.com/dashboard"
+                            href="http://localhost:5173/dashboard"
                             onclick="trackEvent('click_start_session', 'CTA', 'Hero Section')"
                             class="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg flex items-center justify-center space-x-2 hover:shadow-2xl hover:shadow-purple-500/50 transition-all"
                         >
@@ -295,6 +303,240 @@
                     <div
                         class="w-2 bg-gradient-to-t from-purple-400 to-pink-400 rounded-full animate-visualizer-20"
                     ></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Active Sessions – Hardcoded Demo Version -->
+        <section class="py-20 px-4 bg-gradient-to-b from-black/40 via-purple-950/20 to-black relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(168,85,247,0.12),transparent_40%)] pointer-events-none"
+            ></div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16 animate-fade-in">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"
+                    >
+                        Live sessions currently active 🔥
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                        More and more music lovers are creating live sessions – jump in early and help shape the
+                        ultimate collaborative playlist!
+                    </p>
+                </div>
+
+                <!-- Sessions Grid – Hardcoded -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Session 1 -->
+                    <div
+                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
+                    >
+                        <div
+                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
+                        >
+                            <div class="relative">
+                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                            </div>
+                            <span>LIVE</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                            Midnight Neon Drive 🌌
+                        </h3>
+
+                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                            <p class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    />
+                                </svg>
+                                <span>Vibes: Synthwave • Driving • Late Night</span>
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a
+                                data-name="Midnight Neon Drive 🌌"
+                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
+                            >
+                                Join Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Session 2 -->
+                    <div
+                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
+                    >
+                        <div
+                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
+                        >
+                            <div class="relative">
+                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                            </div>
+                            <span>LIVE</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                            Sunset House Party ☀️🍹
+                        </h3>
+
+                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                            <p class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                                    />
+                                </svg>
+                                <span>Vibes: Tropical House • Sunset • Cocktails</span>
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a
+                                data-name="Sunset House Party ☀️🍹"
+                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
+                            >
+                                Join Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Session 3 -->
+                    <div
+                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
+                    >
+                        <div
+                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
+                        >
+                            <div class="relative">
+                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                            </div>
+                            <span>LIVE</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                            90s Throwback Rave 🕹️✨
+                        </h3>
+
+                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                            <p class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                                <span>Vibes: 90s Dance • Eurodance • Nostalgia</span>
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a
+                                data-name="90s Throwback Rave 🕹️✨"
+                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
+                            >
+                                Join Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Session 4 -->
+                    <div
+                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
+                    >
+                        <div
+                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
+                        >
+                            <div class="relative">
+                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                            </div>
+                            <span>LIVE</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                            Epic Gym Motivation Session 💪🔥
+                        </h3>
+
+                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                            <p class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                                <span>Vibes: Trap • EDM • Workout • Hype</span>
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a
+                                data-name="Epic Gym Motivation Session 💪🔥"
+                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
+                            >
+                                Join Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Session 5 -->
+                    <div
+                        class="group relative backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/15 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-600/30 transition-all duration-300 cursor-pointer overflow-hidden"
+                    >
+                        <div
+                            class="absolute -top-3 -right-3 flex items-center space-x-2 bg-red-600/90 text-white px-4 py-1.5 rounded-full text-xs font-bold animate-pulse shadow-lg"
+                        >
+                            <div class="relative">
+                                <div class="absolute inset-0 rounded-full bg-red-400 animate-ping opacity-75"></div>
+                                <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+                            </div>
+                            <span>LIVE</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                            Candlelight Indie & Chill 🌙
+                        </h3>
+
+                        <div class="space-y-2.5 text-sm text-gray-300 mb-6">
+                            <p class="flex items-center space-x-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                    />
+                                </svg>
+                                <span>Vibes: Indie Folk • Lo-Fi • Relaxed</span>
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <a
+                                data-name="Candlelight Indie & Chill 🌙"
+                                class="join-named px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/40 transition-all"
+                            >
+                                Join Now
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1485,7 +1727,7 @@
             <h2 class="text-5xl font-bold mb-6">Ready to democratize your playlist?</h2>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
-                    href="https://app.tunevote.com/dashboard"
+                    href="http://localhost:5173/dashboard"
                     onclick="trackEvent('click_start_session', 'CTA', 'Final Section')"
                     class="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-purple-500/50 transition-all"
                 >
@@ -1703,7 +1945,7 @@
 
             async function handleJoinSession() {
                 try {
-                    const res = await fetch("https://api.tunevote.com/join");
+                    const res = await fetch("http://localhost:4000/join");
                     const data = await res.json();
                     if (data.redirect) {
                         window.location.href = data.redirect;
@@ -1722,7 +1964,7 @@
             // Top Artists
             async function fetchTopArtists() {
                 try {
-                    const res = await fetch("https://api.tunevote.com/top-today");
+                    const res = await fetch("http://localhost:4000/top-today");
                     const data = await res.json();
                     updateTopArtists(data);
                 } catch (err) {
@@ -1771,7 +2013,7 @@
             // Top Weekly Songs
             async function fetchTopWeeklySongs() {
                 try {
-                    const res = await fetch("https://api.tunevote.com/top-weekly-songs");
+                    const res = await fetch("http://localhost:4000/top-weekly-songs");
                     const data = await res.json();
                     updateTopWeeklySongs(data);
                 } catch (err) {
@@ -1849,6 +2091,30 @@
                     trackEvent("scroll_100", "Scroll Depth");
                     scrollTracked[100] = true;
                 }
+            });
+        </script>
+        <script>
+            async function joinWithName(name) {
+                try {
+                    const res = await fetch(`http://localhost:4000/join?name=${encodeURIComponent(name)}`);
+                    const data = await res.json();
+
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    } else {
+                        alert(data.error || "Join fehlgeschlagen");
+                    }
+                } catch (err) {
+                    console.error(err);
+                    alert("Fehler beim Join");
+                }
+            }
+
+            document.querySelectorAll(".join-named").forEach((el) => {
+                el.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    joinWithName(el.dataset.name);
+                });
             });
         </script>
     </body>
