@@ -3191,34 +3191,54 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-black/50 backdrop-blur border-t border-white/10 py-12 px-4">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                        <!-- Music Icon -->
-                        <img
-                            src="icon.png"
-                            alt="TuneVote - Collaborative Music Voting App Logo"
-                            class="w-12 h-12 object-contain transition-all group-hover:scale-110 group-hover:rotate-3"
-                        />
-                        <span
-                            class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-                            >TuneVote</span
-                        >
-                    </div>
+<footer class="bg-black border-t border-white/10 pt-16 pb-8 px-4 font-sans">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <img src="icon.png" alt="TuneVote Logo" class="w-8 h-8 object-contain" />
+                    <span class="text-xl font-semibold tracking-tight text-white">TuneVote</span>
                 </div>
+                <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                    The premier platform for collaborative music voting. Empowering audiences to shape the soundtrack of every event.
+                </p>
+            </div>
 
-                <div class="mt-8 pt-8 border-t border-white/10 text-center text-sm text-gray-400">
-                    <p>
-                        ©
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        TuneVote. All rights reserved. <a href="/privacy.html" class="underline">Privacy Policy</a>
-                    </p>
+            <!-- Contact Column -->
+            <div class="space-y-4">
+                <h4 class="text-white font-medium">Get in Touch</h4>
+                <div class="flex flex-col space-y-2 text-sm">
+                    <a href="mailto:hello@tunevote.ch" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center gap-2">
+                        <span>hello@tunevote.ch</span>
+                    </a>
+                    <p class="text-gray-500 italic">Support available Mon-Fri</p>
                 </div>
             </div>
-        </footer>
+
+            <!-- Navigation Column -->
+            <div class="space-y-4 md:text-right">
+                <h4 class="text-white font-medium">Resources</h4>
+                <nav class="flex flex-col md:items-end space-y-2 text-sm text-gray-400">
+                    <a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="/terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] sm:text-xs text-gray-500 uppercase tracking-widest font-medium">
+            <p>
+                &copy; <script>document.write(new Date().getFullYear());</script> TuneVote. All rights reserved.
+            </p>
+            <div class="mt-4 md:mt-0 flex space-x-6">
+                <span class="hover:text-white cursor-default transition-colors">Made with passion for music</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
         <audio id="demo-audio" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
