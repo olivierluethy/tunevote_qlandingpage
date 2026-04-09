@@ -232,6 +232,140 @@ Now go forth and host your best session yet!
     author: "TuneVote Team",
     readTime: "7 min read",
   },
+  {
+    slug: "2026-10-20-how-we-built-tunevote-the-birth-of-democratic-music",
+    title: "How We Built TuneVote: The Birth of Truly Democratic Music",
+    excerpt: "Tired of fighting over the next song at work or parties? Discover the real frustration that sparked the creation of TuneVote – a simple, fair way for groups to choose music together.",
+    content: `
+## The Moment Everything Changed
+
+It was just another ordinary workday. I walked into the office, and like clockwork, music started playing — either from the radio or someone’s Spotify playlist. At first, it felt fine. But then the same question kept coming up again and again:
+
+**“What song should we play next?”**
+
+We’d start discussing ideas. Someone would throw out a suggestion, then another. For a few minutes, the energy was great. But soon, the suggestions dried up. One person would come up with a really strong song idea, and suddenly everyone else’s input felt pushed aside. When that “great” song finally played and didn’t quite hit the mark for the group, the whole conversation stalled. We’d forgotten the better ideas that never got a fair chance.
+
+Worse still, I kept hearing the same tracks on repeat — sometimes for the fourth time that week. The frustration was real.
+
+## The Search for a Better Solution
+
+I started looking for apps that could solve this problem. Something simple where a group could easily suggest and choose the next song together.
+
+What I found was disappointing.
+
+Most existing solutions were either overly complicated, packed with features we didn’t need, or required everyone to jump through hoops just to participate. Many forced users to have a Spotify Premium account — even just to share a song queue. That was a dealbreaker for me, since I didn’t have one, and I didn’t want to force my colleagues to create accounts either.
+
+We didn’t need a full-featured DJ tool or a complex social platform. We just wanted something **simple**, **fair**, and **accessible** — where everyone’s voice could be heard without barriers.
+
+## Why Existing Tools Fell Short
+
+Here’s what kept happening with the tools we tried:
+
+- Too many unnecessary features that made the interface confusing
+- Mandatory Spotify Premium requirements
+- Overcomplicated voting systems that killed the fun
+- No easy way for everyone in the room to participate instantly
+
+The result? We’d spend more time fiddling with the app than actually enjoying the music.
+
+## The Birth of TuneVote
+
+That recurring frustration became the spark for something new.
+
+We realized there had to be a better way — a truly democratic music experience that puts the group in control without complexity or gatekeeping.
+
+So we built **TuneVote**: a straightforward collaborative music voting tool designed for real-life situations like offices, parties, gyms, or any gathering where people want to enjoy music together.
+
+With TuneVote, anyone can:
+- Suggest songs effortlessly
+- Vote on what plays next
+- See the queue update in real time
+- Participate without needing a Spotify Premium account
+
+No bloated features. No mandatory logins. Just fair, fun, group-driven music.
+
+## From Personal Frustration to Shared Solution
+
+What started as an everyday annoyance at work turned into a mission: create the simplest and fairest way for groups to control their music.
+
+We wanted to eliminate those awkward moments where one strong personality dominates the playlist or where good ideas get lost in the noise. Instead, we built a system where every suggestion gets a fair shot through transparent voting.
+
+The goal was clear: make collaborative music accessible to everyone, whether you’re at the office, hosting friends, or running an event.
+
+## Ready to Experience Democratic Music?
+
+If you’ve ever felt the same frustration — fighting over songs, hearing the same tracks too often, or struggling with complicated apps — TuneVote was built for you.
+
+It’s time to let the group decide what plays next, fairly and effortlessly.
+
+**Try TuneVote today** and turn your next music session into a truly shared experience. Create your first session in seconds and let everyone have a voice in the soundtrack.
+
+No Premium account required. No complicated setup. Just great music chosen by the people who matter most — your group.
+    `,
+    date: "2025-10-20",
+    author: "TuneVote Team",
+    readTime: "6 min read",
+  },
+  {
+    slug: "2026-10-21-the-technical-beginning-of-tunevote-multiplayer-sockets-and-spotify-api",
+    title: "The Technical Beginning of TuneVote: Tackling Multiplayer Sockets and the Spotify API",
+    excerpt: "Discover how TuneVote's development started with complex real-time sockets and our first ambitious attempt using the Spotify Premium API — including the unexpected challenges we faced.",
+    content: `
+## An Unexpectedly Challenging Start
+
+The development of TuneVote didn’t begin smoothly. From day one, we knew we were stepping into technically demanding territory. Building a truly collaborative music experience required real-time synchronization for multiple users — which meant diving deep into **multiplayer sockets** and handling live updates across devices.
+
+We had to master everything related to real-time communication: managing connections, handling disconnections gracefully, syncing votes instantly, and ensuring the music queue stayed consistent for everyone in the session.
+
+## Our First Technical Approach: Spotify Premium API
+
+Early on, we decided on a clear direction for audio playback. After testing different options, one thing became obvious: **Spotify offered the best sound quality**. So our initial plan was to build everything around the Spotify Premium API and Web Playback SDK.
+
+The idea was straightforward on paper:
+- Use Spotify’s official APIs for searching songs
+- Stream high-quality audio directly
+- Build our voting and queue algorithm on top of Spotify’s infrastructure
+
+This approach promised excellent audio fidelity and a familiar music library for users.
+
+## The Spotify Premium Hurdle
+
+There was just one big problem: **I didn’t have a Spotify Premium account**.
+
+To move forward, I had to borrow a colleague’s Premium account. With his permission, I created a developer app under his account to access the Spotify API. Then I built a separate test website that could:
+- Search for songs via a simple input field
+- Select and play tracks directly in the browser
+
+It took several hours of debugging authentication, handling access tokens, and configuring the Web Playback SDK — but eventually, it worked. I could search for a song, click play, and hear it streaming through the web page.
+
+That small victory felt huge at the time.
+
+## The Hidden Downsides (More on This Later)
+
+What we didn’t fully anticipate were the significant limitations and downsides of relying heavily on Spotify’s Premium API for a collaborative tool like TuneVote. These challenges became clearer as development progressed, and we’ll dedicate a future blog post to exploring them in detail.
+
+For now, it’s enough to say that while the sound quality was excellent, the technical and accessibility constraints forced us to think creatively about the long-term architecture.
+
+## From Prototype to Vision
+
+That early prototype — a basic web page connected to Spotify via a borrowed Premium account — marked the real technical beginning of TuneVote. It proved we could handle song search and playback, but it also highlighted how much work lay ahead with real-time sockets, group synchronization, and creating a seamless experience that didn’t force Premium requirements on every participant.
+
+This challenging start taught us valuable lessons about balancing technical ambition with user accessibility — principles that continue to guide TuneVote’s development today.
+
+## Building the Future of Group Music
+
+Every line of code written during those long debugging sessions brought us closer to a tool that makes collaborative music simple, fair, and enjoyable for everyone — whether at the office, a party, or any shared space.
+
+Ready to experience the result of all that hard work?
+
+**Try TuneVote now** and see how easy it is to let your group vote on music in real time. No complicated setup, and participation is open to everyone.
+
+Create your first session today and turn music selection into a fun, democratic experience.
+    `,
+    date: "2025-10-21",
+    author: "TuneVote Team",
+    readTime: "5 min read",
+  }
 ]
 
 export function getAllPosts(): BlogPost[] {
