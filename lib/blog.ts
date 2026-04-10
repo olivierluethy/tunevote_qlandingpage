@@ -306,6 +306,86 @@ No Premium account required. No complicated setup. Just great music chosen by th
     author: "TuneVote Team",
     readTime: "6 min read",
   },
+
+  {
+    slug: "2026-10-22-why-we-abandoned-spotify-premium-for-tunevote-and-switched-to-youtube",
+    title: "Why We Abandoned Spotify Premium: The Session Conflict That Changed Everything",
+    excerpt: "After successfully connecting to Spotify’s API, we discovered a critical flaw that made it impossible to build a truly shared music experience. Here’s why we had to pivot away from Spotify and move to YouTube.",
+    content: `
+## The Harsh Reality After the First Success
+
+After spending hours getting the Spotify Premium API to work, I finally had a working prototype. I could search for songs and play them directly on my test web app. The audio quality was excellent — exactly what we had hoped for.
+
+But then came the moment of truth: **How would session sharing actually work in a group?**
+
+What I discovered next was a fundamental problem I hadn’t anticipated.
+
+## The Spotify Session Conflict
+
+As soon as my web app started playing a song through the Spotify API, it **took over the active Spotify session** on my colleague’s account.
+
+Here’s what actually happened:
+
+- If my colleague was listening to music on his Spotify app and I started a song from TuneVote, his playback would suddenly stop and switch to my web app’s session.
+- Conversely, if he chose a new song on his phone while my web app was playing, it would interrupt and override whatever was playing in the browser.
+
+This created constant session hijacking. The music player could never peacefully coexist — one session always stole control from the other.
+
+## The Even Bigger Problem: Forcing Accounts on Everyone
+
+The deeper issue became clear quickly. For other people in the room to listen along, they would each need to:
+
+1. Have their own Spotify Premium account
+2. Log in with their credentials
+3. Connect their personal account to the session
+
+That completely defeated the purpose of our tool.
+
+We didn’t want to force colleagues, friends, or guests to create accounts, pay for Premium, or go through complicated logins just to vote on the next song. The whole point was simplicity and accessibility — especially for guest users.
+
+## What We Really Needed
+
+Our vision was clear:
+
+- One person starts the session (the host)
+- Everyone else joins as a **guest** with zero friction
+- No mandatory Spotify accounts or Premium subscriptions
+- Simple, instant participation for the whole group
+
+Spotify’s architecture simply couldn’t support that model without major compromises.
+
+## The Decision to Pivot
+
+After extensive research and testing, we reached an unavoidable conclusion: **Spotify was not the right foundation for TuneVote**.
+
+We needed a playback solution that allowed true shared listening without session conflicts and without requiring every participant to have a paid account.
+
+That’s when we made the strategic decision to shift our focus to **YouTube**.
+
+YouTube offered several key advantages for our use case:
+- No Premium requirement for basic playback
+- Easier handling of shared sessions
+- Much simpler guest participation model
+- Still decent audio quality for group settings
+
+## Learning from Setbacks
+
+This pivot wasn’t easy — we had already invested significant time into the Spotify integration. But discovering these limitations early saved us from building a product that would frustrate users later.
+
+Every technical dead-end taught us something valuable about what a truly democratic music tool needs to feel like: effortless, inclusive, and free from unnecessary barriers.
+
+## Ready to Experience the Result?
+
+After overcoming these early technical challenges, TuneVote is now exactly what we set out to build — a simple, fair, and account-light way for groups to enjoy music together.
+
+**Try TuneVote today** — create a session in seconds and invite your colleagues, friends, or guests to vote on the next song. No Premium accounts required, no forced logins, just pure collaborative fun.
+
+Start your first democratic playlist now.
+    `,
+    date: "2025-10-22",
+    author: "TuneVote Team",
+    readTime: "5 min read",
+  },
   {
     slug: "2026-10-21-the-technical-beginning-of-tunevote-multiplayer-sockets-and-spotify-api",
     title: "The Technical Beginning of TuneVote: Tackling Multiplayer Sockets and the Spotify API",

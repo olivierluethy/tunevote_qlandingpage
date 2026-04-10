@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Music } from "lucide-react"
 import { trackClick } from "@/lib/analytics"
 import { JoinSessionModal } from "./join-session-modal"
+import Image from 'next/image';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,8 +30,14 @@ export function Navigation() {
               href="/"
               className="flex items-center gap-2 group transition-transform duration-300"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center transition-all group-hover:scale-110 group-hover:rotate-3">
-                <Music className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:rotate-3">
+                <Image 
+                    src="/og-image.png"
+                    alt="Beschreibung"
+                    width={40}
+                    height={40}
+                    className="object-cover w-full h-full"
+                  />
               </div>
               <span className="text-xl sm:text-2xl font-bold gradient-text group-hover:brightness-125 transition-all">
                 TuneVote

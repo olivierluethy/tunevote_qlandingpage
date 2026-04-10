@@ -15,6 +15,77 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }))
 }
 
+function renderMarkdown(content: string) {
+  const lines = content.trimStart().split("\n")
+  const elements: React.ReactNode[] = []
+  let inList = false
+  let listItems: React.ReactNode[] = []
+
+  const flushList = () => {
+    if (listItems.length > 0) {
+      elements.push(
+        <ul key={`list-${elements.length}`} className="flex flex-col gap-2 pl-6 list-disc">
+          {listItems}
+        </ul>
+      )
+      listItems = []
+      inList = false
+    }
+  }
+
+  const formatInline = (text: string) =>
+    text
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>')
+      .replace(/\*(.*?)\*/g, "<em>$1</em>")
+      .replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        '<a href="$2" class="text-purple-400 underline hover:text-purple-300 transition-colors" target="_blank" rel="noopener noreferrer">$1</a>'
+      )
+
+  lines.forEach((line, i) => {
+    const trimmed = line.trim()
+
+    if (trimmed === "---") {
+      flushList()
+      elements.push(<hr key={`hr-${i}`} className="my-8 border-muted-foreground" />)
+    } else if (trimmed.startsWith("## ")) {
+      flushList()
+      elements.push(
+        <h2 key={`h2-${i}`} className="text-2xl sm:text-3xl mt-12 mb-6 font-bold">
+          {trimmed.replace("## ", "")}
+        </h2>
+      )
+    } else if (trimmed.startsWith("### ")) {
+      flushList()
+      elements.push(
+        <h3 key={`h3-${i}`} className="text-xl sm:text-2xl mt-8 mb-4 font-semibold">
+          {trimmed.replace("### ", "")}
+        </h3>
+      )
+    } else if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
+      inList = true
+      const itemContent = trimmed.replace(/^[-*] /, "")
+      listItems.push(
+        <li key={`li-${i}`}>
+          <span dangerouslySetInnerHTML={{ __html: formatInline(itemContent) }} />
+        </li>
+      )
+    } else if (trimmed === "") {
+      flushList()
+    } else {
+      flushList()
+      elements.push(
+        <p key={`p-${i}`} className="my-4 text-muted-foreground leading-relaxed">
+          <span dangerouslySetInnerHTML={{ __html: formatInline(trimmed) }} />
+        </p>
+      )
+    }
+  })
+
+  flushList()
+  return elements
+}
+
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
@@ -86,60 +157,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </header>
 
           <div className="prose prose-invert prose-lg max-w-none prose-headings:gradient-text prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed prose-strong:text-foreground prose-a:text-purple-400 prose-a:no-underline hover:prose-a:text-purple-300 prose-li:text-muted-foreground prose-blockquote:border-purple-500 prose-blockquote:text-muted-foreground">
-            {post.content.split("\n").map((line, index) => {
-              const trimmed = line.trim()
-
-              if (trimmed.startsWith("## ")) {
-                return (
-                  <h2 key={index} className="text-2xl sm:text-3xl mt-12 mb-6">
-                    {trimmed.replace("## ", "")}
-                  </h2>
-                )
-              }
-
-              if (trimmed.startsWith("### ")) {
-                return (
-                  <h3 key={index} className="text-xl sm:text-2xl mt-8 mb-4">
-                    {trimmed.replace("### ", "")}
-                  </h3>
-                )
-              }
-
-              if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
-                return (
-                  <p key={index} className="font-semibold text-foreground my-4">
-                    {trimmed.replace(/\*\*/g, "")}
-                  </p>
-                )
-              }
-
-              if (trimmed.startsWith("- ")) {
-                return (
-                  <li key={index} className="ml-4">
-                    {trimmed.replace("- ", "")}
-                  </li>
-                )
-              }
-
-              if (/^\d+\.\s/.test(trimmed)) {
-                return (
-                  <li key={index} className="ml-4 list-decimal">
-                    {trimmed.replace(/^\d+\.\s/, "")}
-                  </li>
-                )
-              }
-
-              if (trimmed === "") {
-                return null
-              }
-
-              return (
-                <p key={index} className="my-4">
-                  {trimmed}
-                </p>
-              )
-            })}
-          </div>
+  {renderMarkdown(post.content)}
+</div>
 
           {/* CTA */}
           <div className="mt-16 glass-card p-8 text-center">
