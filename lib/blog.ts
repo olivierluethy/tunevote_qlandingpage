@@ -307,6 +307,84 @@ No Premium account required. No complicated setup. Just great music chosen by th
     readTime: "6 min read",
   },
 
+{
+    slug: "2026-02-02-why-we-added-google-login-to-tunevote-the-power-of-one-click-signup",
+    title: "Why We Added Google Login to TuneVote: The Power of One-Click Signup",
+    excerpt: "Creating an account with email and password felt painfully slow. After experiencing friction on other sites — and seeing the success of social login elsewhere — we made the switch. Here’s what changed.",
+    content: `
+## The Friction We Didn’t See Coming
+
+A few weeks ago, one of my colleagues pointed out how tedious it feels to sign up with just an email and password — especially when you also have to type the password twice.
+
+I felt this myself when logging into his web app, [trip-xchange.com](https://trip-xchange.com/). On mobile, repeatedly entering my email and password before I could even access the site became surprisingly annoying.
+
+What should have been a quick entry point turned into a small barrier every single time.
+
+## What the Competition Was Already Doing
+
+Looking at successful platforms, the difference was obvious.
+
+Most big apps and websites don’t force users through manual email/password forms anymore. Instead, they offer **Google, Facebook, and Apple login buttons** — letting users sign in with just one or two taps.
+
+These “social login” options aren’t just convenient. They’re a fast way for apps to collect user emails while removing almost all signup friction.
+
+## The Real Priority for Users
+
+This experience taught me an important lesson:
+
+Users don’t primarily care about how beautiful or unique your interface looks.  
+They care about reaching their goal **as quickly and reliably as possible**.
+
+In the case of TuneVote, the goal is simple:  
+Start a music session → Invite friends/colleagues → Vote on songs together.
+
+Anything that slows down that first step hurts the entire experience.
+
+## Making “One-Click” Login a Must-Have
+
+Because all the major platforms (Google, Spotify, YouTube, etc.) offer seamless login options, we realized it had become table stakes for a good user experience.
+
+So we implemented **Google Login** for TuneVote.
+
+The difference was immediate and noticeable:
+
+- Signing up or logging in now takes just a few seconds.
+- No need to remember yet another password.
+- Works smoothly on both desktop and mobile.
+
+## The Results Spoke for Themselves
+
+Within a very short time after adding Google Login, we saw:
+
+- Several new users join the platform instantly by clicking the Google button.
+- A clear increase in signups and session creations.
+- My colleague on trip-xchange.com experienced the same boost — significantly more people signed up once the Google option was available.
+
+People simply prefer the path of least resistance.
+
+## Why This Matters for Collaborative Tools
+
+TuneVote is meant to be used in the moment — at the office, during a break, at a party, or while hanging out with friends.  
+
+The last thing anyone wants is to stop the flow because they have to create yet another account with email and password.
+
+With Google Login, anyone can jump in, create or join a session, and start voting on music almost instantly.
+
+## Try the Frictionless Experience Yourself
+
+We built TuneVote to make group music as simple and enjoyable as possible — from the very first second.
+
+**Ready to start a session in seconds?**
+
+Click “Continue with Google”, create your first collaborative playlist, and invite your team or friends. No password hassle, no waiting — just great music decided together.
+
+Give it a try now and feel the difference one-click login makes.
+    `,
+    date: "2026-02-02",
+    author: "TuneVote Team",
+    readTime: "5 min read",
+  },
+
   {
     slug: "2026-10-22-why-we-abandoned-spotify-premium-for-tunevote-and-switched-to-youtube",
     title: "Why We Abandoned Spotify Premium: The Session Conflict That Changed Everything",
