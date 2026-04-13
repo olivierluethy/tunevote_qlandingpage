@@ -307,6 +307,71 @@ No Premium account required. No complicated setup. Just great music chosen by th
     readTime: "6 min read",
   },
 
+  {
+    slug: "2026-10-24-choosing-the-right-tech-stack-for-tunevote-nodejs-vs-php",
+    title: "Choosing the Right Tech Stack for TuneVote: Why We Went with Node.js Over PHP",
+    excerpt: "When building real-time collaborative features, the backend choice is critical. Here’s why we moved away from our initial PHP idea and chose Node.js for TuneVote.",
+    content: `
+## Deciding on the Tech Stack
+
+Every project starts with important technical decisions, and for TuneVote the choice of backend was one of the first big ones.
+
+We initially considered building the backend with **PHP**, mainly because it was already well-supported in our existing hosting environment. It would have been the easiest and fastest option to get started.
+
+However, one core requirement changed everything: **real-time multiplayer sessions**.
+
+## The Need for Reliable Real-Time Communication
+
+To make collaborative music voting work smoothly, we needed instant synchronization between all participants. Votes, song suggestions, queue updates, and playback state all had to update live across multiple devices.
+
+This is exactly where **Socket.io** comes in — a powerful library for handling real-time, bidirectional communication.
+
+While it is technically possible to run Socket.io with PHP, it quickly became clear that the implementation, maintenance, and performance would be far from ideal.
+
+## Why Node.js Was the Better Choice
+
+Socket.io was originally designed and is still best optimized for **Node.js**. The entire ecosystem around real-time applications strongly recommends Node.js as the prime environment for Socket.io because:
+
+- Native asynchronous handling fits real-time use cases perfectly
+- Much better performance and stability for concurrent connections
+- Simpler and more reliable implementation
+- Excellent community support and documentation for multiplayer features
+
+After evaluating both options, we decided to go with a **Node.js backend**.
+
+## The Hosting Trade-Off
+
+The main reason we hesitated with Node.js was hosting.
+
+Our current setup made PHP deployments extremely simple. Switching to Node.js meant we had to set up a separate **VPS server** to run the backend. This added complexity and cost compared to just dropping PHP files into our existing host.
+
+But in the end, choosing the right tool for the job was more important than short-term convenience.
+
+## A Decision That Paid Off
+
+Moving to Node.js gave us the solid foundation we needed for true real-time collaboration. The sockets work reliably, sessions stay in sync, and the system scales much better as more people join a voting session.
+
+It was the right technical decision for a product that lives and dies by its real-time experience.
+
+## Building a Better Collaborative Music Tool
+
+Every technical choice we make is driven by one goal: making group music selection as seamless and enjoyable as possible.
+
+Thanks to Node.js and Socket.io, TuneVote delivers exactly that — instant updates, smooth voting, and a shared experience that feels natural for everyone in the room.
+
+## Ready to Test It Yourself?
+
+Experience the result of these careful backend decisions.
+
+**Try TuneVote today** — create a session and invite your colleagues or friends. Watch how smoothly everyone can suggest and vote on songs in real time.
+
+No complicated setup. Just great music chosen together, powered by solid real-time technology.
+    `,
+    date: "2026-10-24",
+    author: "TuneVote Team",
+    readTime: "5 min read",
+  },
+
 {
     slug: "2026-02-02-why-we-added-google-login-to-tunevote-the-power-of-one-click-signup",
     title: "Why We Added Google Login to TuneVote: The Power of One-Click Signup",
