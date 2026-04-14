@@ -11,6 +11,135 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "2026-04-14-first-results-after-nextjs-migration-3-new-users-in-one-week",
+    title: "First Results After Our Next.js Migration: 3 New Users in Just One Week",
+    excerpt: "One week after switching our landing page to Next.js for faster blog publishing and better SEO, we welcomed three new users. Here’s what we’ve learned so far.",
+    content: `
+## Changes Are Already Bearing Fruit
+
+We’re seeing the first positive effects of our recent platform upgrade.
+
+Since switching the landing page technology to **Next.js** — which allows us to create and publish blog posts much faster — we’ve welcomed **three new users** to TuneVote in less than a week.
+
+That’s exciting progress and a nice early win for our content-driven growth strategy.
+
+## Correlation or Coincidence?
+
+Of course, we’re staying realistic.
+
+It’s possible that these new signups are purely coincidental and not directly caused by the faster blog publishing or improved SEO. New users might have simply discovered us at the right moment and decided to give the platform a try.
+
+We’re not jumping to conclusions. Instead, we’re observing everything closely:
+- How users find us
+- What they do after signing up
+- Whether they create sessions and invite others
+- How the overall user behavior evolves
+
+## Watching and Learning in Real Time
+
+We’re monitoring the situation very carefully and documenting every insight from the inside.
+
+Our goal is to understand:
+- Which changes actually move the needle
+- What users expect when they first land on TuneVote
+- Where the current experience meets — or falls short of — their needs
+
+Every piece of data helps us make better decisions.
+
+## Committed to Rapid Improvement
+
+Based on the data we collect and our team’s expertise, we’re ready to implement improvements at high speed.
+
+We want to turn casual signups into active, happy users who regularly use TuneVote for office breaks, parties, team events, or casual gatherings.
+
+The feedback loop is now much tighter, and we’re excited to see where it leads.
+
+## A Transparent Journey
+
+We believe in sharing our progress openly with you — the early users and supporters of TuneVote.
+
+This blog series is part of that transparency: showing not just the wins, but also the honest reflections and the continuous work happening behind the scenes.
+
+## Join the Growing Community
+
+If you haven’t tried TuneVote yet, now is a great time.
+
+We’re improving quickly, and every new user helps shape the future of the platform.
+
+**Create your first session today** — it only takes a few seconds with Google Login. Invite your colleagues, friends, or teammates and experience real democratic music voting.
+
+Watch how fast the queue builds and how much more fun music selection becomes when everyone has a voice.
+
+We can’t wait to see you in a session soon.
+    `,
+    date: "2026-04-14",
+    author: "TuneVote Team",
+    readTime: "4 min read",
+  },
+  {
+    slug: "2026-04-09-why-we-migrated-tunevote-to-nextjs-a-major-platform-upgrade",
+    title: "Why We Migrated TuneVote to Next.js: A Major Platform Upgrade",
+    excerpt: "We’ve made a significant switch to Next.js for a faster, more modern, and professional experience. Here’s why this move was essential for our long-term growth and SEO strategy.",
+    content: `
+## A Major Step Forward
+
+On April 9, 2026, we completed a definitive switch: TuneVote now runs on **Next.js**.
+
+This upgrade gives us a significantly more modern, faster, professional, and reliable platform. One of the biggest immediate benefits is the ability to create and publish dynamic blog posts with much less effort — helping us attract more traffic and reach a wider audience through SEO.
+
+The platform is still evolving, but we can already see it improving at a steady pace.
+
+## Why We Chose Next.js
+
+We didn’t make this decision lightly. We knew that to deliver the best possible experience to our users, we needed to stay at the cutting edge of web technology.
+
+Next.js offers exactly what a growing collaborative tool like TuneVote needs:
+- Blazing-fast performance
+- Excellent SEO capabilities
+- Modern development experience
+- Better reliability and scalability
+
+We wanted a foundation that supports sustainable, long-term growth and allows us to continuously improve the product without technical limitations holding us back.
+
+## Investing in Speed and Quality
+
+This migration wasn’t just about future-proofing — it was about **speed**.
+
+We prioritized moving quickly toward a high-quality, up-to-date technology stack, even though it required significant effort. Noticeable results and a professional user experience are extremely important to us.
+
+By running our landing page and the entire platform on Next.js, we’ve laid a strong foundation for rapid future development.
+
+## The Growing Importance of Blog Content
+
+One key reason for this switch is content marketing and SEO.
+
+Blog posts are becoming increasingly vital for our sustainable growth. With better tools for creating and optimizing articles, we can reach more people who are looking for collaborative music solutions.
+
+We’re not relying solely on organic user growth — we’re actively building visibility through valuable content that helps users discover TuneVote.
+
+## Steady Progress, Real Users
+
+At the same time, we continue to see slow but steady growth in real users. More people are signing up, creating sessions, and using the platform with their colleagues and friends.
+
+Every new user motivates us to keep improving.
+
+## What This Means for You
+
+Thanks to the Next.js migration, TuneVote is now faster, smoother, and better positioned for the future. Whether you’re creating a quick office playlist or hosting a bigger event, the experience keeps getting better behind the scenes.
+
+## Ready to Try the Upgraded TuneVote?
+
+The platform is evolving every week — and we’d love for you to be part of that journey.
+
+**Create your first (or next) session today** with just one click via Google Login. Invite your team or friends and experience democratic music voting in real time.
+
+Faster loading, better SEO, and continuous improvements — all working together to make group music more fun and effortless than ever.
+    `,
+    date: "2026-04-09",
+    author: "TuneVote Team",
+    readTime: "5 min read",
+  },
+  {
     slug: "how-to-take-full-control-of-your-party-music",
     title: "How to Take Full Control of Your Party Music",
     excerpt:
