@@ -11,6 +11,71 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+  slug: "2026-04-16-observing-user-behavior-more-signups-fewer-sessions",
+    title: "Observing User Behavior: More Signups, But Fewer Sessions Created",
+    excerpt: "We’re seeing more users signing up to TuneVote, but many aren’t creating sessions yet. Today we even had a manual email/password signup — something we didn’t expect in 2026. Here’s what we’re learning.",
+    content: `
+## More Traffic, Less Action
+
+The numbers are slowly trending upward — more users are finding TuneVote, logging in, and creating accounts.
+
+However, we’ve noticed a clear pattern: many people sign up but stop short of actually creating a session. Even private sessions, which should be the easiest starting point, are rarely being created right away.
+
+This gap between signup and active use is something we’re watching very closely.
+
+## The Surprise Manual Signup
+
+Today brought another interesting moment.
+
+A user created an account the “old-fashioned” way — by manually typing in their email and password. No Google Login, no Facebook. Just a classic registration form.
+
+I have to admit, I didn’t expect that to happen much anymore. In an era where everyone seems to want everything done as quickly as possible, manual signups feel almost retro.
+
+But maybe I’m underestimating how many people still prefer this method. It’s a good reminder that user preferences can be more diverse than we assume.
+
+## The Engagement Challenge
+
+While it’s encouraging to see new accounts being created, it’s a bit disappointing that so few users take the next step and start actively using the platform.
+
+We want people to jump in, create a session, invite others, and experience the fun of democratic music voting. Right now, many are exploring but not yet engaging.
+
+That’s valuable information.
+
+## Turning Observations into Improvements
+
+Every signup — whether through Google or manual registration — gives us data we can learn from:
+
+- What brings users to the site?
+- Where do they get stuck or lose interest?
+- What might be holding them back from creating that first session?
+
+We’re using these insights to refine the onboarding experience, simplify session creation, and make the value of TuneVote clearer from the very first click.
+
+At least users are coming — and that gives us a solid foundation to build on for marketing and product improvements.
+
+## We’re Listening and Iterating Fast
+
+Our goal remains the same: make TuneVote so intuitive and useful that signing up naturally leads to immediate, enjoyable use.
+
+We’ll keep observing, testing, and improving as quickly as possible.
+
+## Ready to Break the Pattern?
+
+If you’ve signed up but haven’t created a session yet — this is your gentle nudge.
+
+Creating your first session literally takes seconds, and it’s the best way to understand what TuneVote is really about.
+
+**Try it now**: Log in (Google or otherwise), create a private session, add a few songs, and invite a colleague or friend to vote along.
+
+Experience how fun and fair group music selection can be when everyone has a voice.
+
+We’d love to see you actively using the platform — and we’re working hard to make that first step even smoother.
+    `,
+    date: "2026-04-16",
+    author: "TuneVote Team",
+    readTime: "5 min read",
+  },
+  {
     slug: "2026-04-14-first-results-after-nextjs-migration-3-new-users-in-one-week",
     title: "First Results After Our Next.js Migration: 3 New Users in Just One Week",
     excerpt: "One week after switching our landing page to Next.js for faster blog publishing and better SEO, we welcomed three new users. Here’s what we’ve learned so far.",
