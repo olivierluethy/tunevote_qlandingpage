@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import { GoogleAnalytics } from "@next/third-parties/google"
+import { Analytics } from "@vercel/analytics/next"
 import { AnalyticsProvider } from "@/components/analytics-provider"
 import "./globals.css"
 
@@ -101,6 +102,7 @@ export default function RootLayout({
           {children}
         </AnalyticsProvider>
         {gaId && <GoogleAnalytics gaId={gaId} />}
+        <Analytics />
       </body>
     </html>
   )
