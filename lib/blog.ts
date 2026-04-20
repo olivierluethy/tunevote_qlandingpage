@@ -1,19 +1,260 @@
 export interface BlogPost {
-  slug: string
-  title: string
-  excerpt: string
-  content: string
-  date: string
-  author: string
-  readTime: string
-  image?: string
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  author: string;
+  readTime: string;
+  image?: string;
 }
 
 export const blogPosts: BlogPost[] = [
   {
-  slug: "2026-04-16-observing-user-behavior-more-signups-fewer-sessions",
+    slug: "2026-04-end-to-end-analytics-search-funnel",
+    title:
+      "How to Implement End-to-End Analytics for Your Search Funnel (And Actually Understand User Behavior)",
+    excerpt:
+      "Struggling to understand why users don’t convert after searching? Learn how to implement diagnostic-level analytics that reveal exactly where and why users drop off.",
+    content: `
+## Why Most Analytics Setups Fail
+
+Many applications track basic metrics like page views or clicks—but when it comes to understanding *why* users don’t convert, these numbers fall short.
+
+If users search but don’t add a song (or complete any key action), you’re left guessing:
+
+- Did they not find anything?
+- Did the system fail?
+- Or did they simply lose interest?
+
+Without **end-to-end analytics**, you’re operating blind.
+
+This guide shows how to implement a **production-grade analytics system** that gives you complete visibility—even with just a handful of users.
+
+---
+
+## The Goal: Full Funnel Transparency
+
+To truly understand user behavior, you need to answer one critical question:
+
+> Did the user search, did they get results, and if yes—why didn’t they convert?
+
+This requires tracking every meaningful interaction across the entire journey.
+
+---
+
+## Mapping the User Journey
+
+A typical search-to-action flow looks like this:
+
+1. User opens a session
+2. User interacts with search
+3. Search executes
+4. Results are returned (or not)
+5. User interacts with results
+6. User converts (adds a song)
+
+Each step is a potential drop-off point—and each one must be tracked.
+
+---
+
+## Step 1: Track the Session Lifecycle
+
+Start by understanding how users enter and experience your session.
+
+Track events like:
+
+- Session page viewed
+- Session initialized
+- Empty state seen (no content yet)
+
+This gives you context for everything that follows and helps identify early drop-offs.
+
+---
+
+## Step 2: Instrument the Search Funnel (Critical)
+
+### A. User Intent Signals
+
+Before a search even happens, track:
+
+- When search is opened
+- When input is focused
+- When users start typing
+
+This tells you whether users *intend* to search—or abandon early.
+
+---
+
+### B. Search Execution
+
+When a user performs a search, capture:
+
+- The query
+- Query length
+- Whether it’s a URL
+
+This helps diagnose poor queries versus system issues.
+
+---
+
+### C. Search Results (The Most Important Layer)
+
+This is where most analytics setups fail.
+
+You must track:
+
+- Number of results returned
+- Data source (cache or API)
+- Response time
+
+Also track explicitly when:
+
+- **No results are returned**
+
+This distinction is crucial. It allows you to differentiate between:
+
+- Weak search queries
+- Poor matching logic
+- External API limitations
+
+---
+
+### D. Error Tracking
+
+Not all failures are user-related.
+
+Track errors such as:
+
+- API quota exceeded
+- Network issues
+- Invalid API keys
+
+Without this, you might wrongly assume users are at fault.
+
+---
+
+### E. User Interaction with Results
+
+Even if results are shown, users may not engage.
+
+Track:
+
+- Which result was clicked
+- Position in the list
+- Total results available
+
+This reveals whether your results are actually relevant.
+
+---
+
+## Step 3: Track Conversion Events
+
+The key success action (e.g., adding a song) must include:
+
+- Source of the action (search, paste, suggestion)
+- Time since search
+- Time since session start
+
+This enables deeper insights like:
+
+- Time-to-first-action
+- Friction in decision-making
+
+---
+
+## Step 4: Don’t Ignore the Paste Flow
+
+Many users bypass search entirely by pasting links.
+
+Track:
+
+- Paste attempts
+- Successful pastes
+- Failed pastes (with reasons)
+
+This ensures you’re not missing an important alternative path.
+
+---
+
+## Step 5: Monitor Guest Behavior
+
+Guest users often have higher drop-off rates.
+
+Track:
+
+- When guest prompts are shown
+- When users join as guests
+- When they dismiss the modal
+
+This helps identify onboarding friction.
+
+---
+
+## Turning Data into Insights
+
+Once implemented, your analytics should allow you to calculate:
+
+- % of users who opened search vs. actually searched
+- % of searches that returned results
+- % of searches with zero results
+- % of users who clicked results
+- % of users who converted
+
+More importantly, you can finally answer:
+
+- Are users failing because of **bad results**?
+- Because of **technical issues**?
+- Or because of **UX friction**?
+
+---
+
+## The Power of Diagnostic-Level Analytics
+
+With proper instrumentation, even **1–2 users** can provide actionable insights.
+
+Instead of guessing, you’ll know:
+
+- Where users drop off
+- Why they drop off
+- What to fix first
+
+This is the difference between **data collection** and **true product intelligence**.
+
+---
+
+## Best Practices for Implementation
+
+- Centralize tracking in a single utility
+- Avoid duplicate events
+- Track at meaningful lifecycle moments
+- Keep performance impact minimal
+- Always include context (timestamps, session data)
+
+Consistency is what turns raw events into usable insights.
+
+---
+
+## Final Thoughts
+
+If you can’t clearly answer *why* users aren’t converting, your analytics setup isn’t complete.
+
+By implementing full end-to-end tracking across your search funnel, you move from assumptions to clarity—and from guesswork to confident decisions.
+
+Ready to truly understand your users and optimize your product experience?
+
+Start implementing smarter analytics today—and see the difference immediately.
+    `,
+    date: "2026-04-20",
+    author: "TuneVote Team",
+    readTime: "6 min read",
+  },
+
+  {
+    slug: "2026-04-16-observing-user-behavior-more-signups-fewer-sessions",
     title: "Observing User Behavior: More Signups, But Fewer Sessions Created",
-    excerpt: "We’re seeing more users signing up to TuneVote, but many aren’t creating sessions yet. Today we even had a manual email/password signup — something we didn’t expect in 2026. Here’s what we’re learning.",
+    excerpt:
+      "We’re seeing more users signing up to TuneVote, but many aren’t creating sessions yet. Today we even had a manual email/password signup — something we didn’t expect in 2026. Here’s what we’re learning.",
     content: `
 ## More Traffic, Less Action
 
@@ -77,8 +318,10 @@ We’d love to see you actively using the platform — and we’re working hard 
   },
   {
     slug: "2026-04-14-first-results-after-nextjs-migration-3-new-users-in-one-week",
-    title: "First Results After Our Next.js Migration: 3 New Users in Just One Week",
-    excerpt: "One week after switching our landing page to Next.js for faster blog publishing and better SEO, we welcomed three new users. Here’s what we’ve learned so far.",
+    title:
+      "First Results After Our Next.js Migration: 3 New Users in Just One Week",
+    excerpt:
+      "One week after switching our landing page to Next.js for faster blog publishing and better SEO, we welcomed three new users. Here’s what we’ve learned so far.",
     content: `
 ## Changes Are Already Bearing Fruit
 
@@ -144,7 +387,8 @@ We can’t wait to see you in a session soon.
   {
     slug: "2026-04-09-why-we-migrated-tunevote-to-nextjs-a-major-platform-upgrade",
     title: "Why We Migrated TuneVote to Next.js: A Major Platform Upgrade",
-    excerpt: "We’ve made a significant switch to Next.js for a faster, more modern, and professional experience. Here’s why this move was essential for our long-term growth and SEO strategy.",
+    excerpt:
+      "We’ve made a significant switch to Next.js for a faster, more modern, and professional experience. Here’s why this move was essential for our long-term growth and SEO strategy.",
     content: `
 ## A Major Step Forward
 
@@ -429,7 +673,8 @@ Now go forth and host your best session yet!
   {
     slug: "2026-10-20-how-we-built-tunevote-the-birth-of-democratic-music",
     title: "How We Built TuneVote: The Birth of Truly Democratic Music",
-    excerpt: "Tired of fighting over the next song at work or parties? Discover the real frustration that sparked the creation of TuneVote – a simple, fair way for groups to choose music together.",
+    excerpt:
+      "Tired of fighting over the next song at work or parties? Discover the real frustration that sparked the creation of TuneVote – a simple, fair way for groups to choose music together.",
     content: `
 ## The Moment Everything Changed
 
@@ -503,7 +748,8 @@ No Premium account required. No complicated setup. Just great music chosen by th
   {
     slug: "2026-02-04-our-first-user-milestone-tunevote-gets-its-very-first-session",
     title: "Our First User Milestone: TuneVote Gets Its Very First Session",
-    excerpt: "On February 2nd, 2026, the first person signed up and created a private session on TuneVote. A huge milestone — and a clear validation of our Google Login decision.",
+    excerpt:
+      "On February 2nd, 2026, the first person signed up and created a private session on TuneVote. A huge milestone — and a clear validation of our Google Login decision.",
     content: `
 ## A Moment We’ll Never Forget
 
@@ -564,10 +810,12 @@ We can’t wait to see what you create.
     author: "TuneVote Team",
     readTime: "4 min read",
   },
-{
+  {
     slug: "2026-02-02-why-we-added-google-login-to-tunevote-the-power-of-one-click-signup",
-    title: "Why We Added Google Login to TuneVote: The Power of One-Click Signup",
-    excerpt: "Creating an account with email and password felt painfully slow. After experiencing friction on other sites — and seeing the success of social login elsewhere — we made the switch. Here’s what changed.",
+    title:
+      "Why We Added Google Login to TuneVote: The Power of One-Click Signup",
+    excerpt:
+      "Creating an account with email and password felt painfully slow. After experiencing friction on other sites — and seeing the success of social login elsewhere — we made the switch. Here’s what changed.",
     content: `
 ## The Friction We Didn’t See Coming
 
@@ -642,10 +890,12 @@ Give it a try now and feel the difference one-click login makes.
     readTime: "5 min read",
   },
 
-   {
+  {
     slug: "2026-10-24-choosing-the-right-tech-stack-for-tunevote-nodejs-vs-php",
-    title: "Choosing the Right Tech Stack for TuneVote: Why We Went with Node.js Over PHP",
-    excerpt: "When building real-time collaborative features, the backend choice is critical. Here’s why we moved away from our initial PHP idea and chose Node.js for TuneVote.",
+    title:
+      "Choosing the Right Tech Stack for TuneVote: Why We Went with Node.js Over PHP",
+    excerpt:
+      "When building real-time collaborative features, the backend choice is critical. Here’s why we moved away from our initial PHP idea and chose Node.js for TuneVote.",
     content: `
 ## Deciding on the Tech Stack
 
@@ -709,8 +959,10 @@ No complicated setup. Just great music chosen together, powered by solid real-ti
 
   {
     slug: "2026-10-22-why-we-abandoned-spotify-premium-for-tunevote-and-switched-to-youtube",
-    title: "Why We Abandoned Spotify Premium: The Session Conflict That Changed Everything",
-    excerpt: "After successfully connecting to Spotify’s API, we discovered a critical flaw that made it impossible to build a truly shared music experience. Here’s why we had to pivot away from Spotify and move to YouTube.",
+    title:
+      "Why We Abandoned Spotify Premium: The Session Conflict That Changed Everything",
+    excerpt:
+      "After successfully connecting to Spotify’s API, we discovered a critical flaw that made it impossible to build a truly shared music experience. Here’s why we had to pivot away from Spotify and move to YouTube.",
     content: `
 ## The Harsh Reality After the First Success
 
@@ -788,8 +1040,10 @@ Start your first democratic playlist now.
   },
   {
     slug: "2026-10-21-the-technical-beginning-of-tunevote-multiplayer-sockets-and-spotify-api",
-    title: "The Technical Beginning of TuneVote: Tackling Multiplayer Sockets and the Spotify API",
-    excerpt: "Discover how TuneVote's development started with complex real-time sockets and our first ambitious attempt using the Spotify Premium API — including the unexpected challenges we faced.",
+    title:
+      "The Technical Beginning of TuneVote: Tackling Multiplayer Sockets and the Spotify API",
+    excerpt:
+      "Discover how TuneVote's development started with complex real-time sockets and our first ambitious attempt using the Spotify Premium API — including the unexpected challenges we faced.",
     content: `
 ## An Unexpectedly Challenging Start
 
@@ -845,17 +1099,19 @@ Create your first session today and turn music selection into a fun, democratic 
     date: "2025-10-21",
     author: "TuneVote Team",
     readTime: "5 min read",
-  }
-]
+  },
+];
 
 export function getAllPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  return blogPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug)
+  return blogPosts.find((post) => post.slug === slug);
 }
 
 export function getAllSlugs(): string[] {
-  return blogPosts.map((post) => post.slug)
+  return blogPosts.map((post) => post.slug);
 }
