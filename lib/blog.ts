@@ -11,6 +11,213 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+      slug: "2025-08-fixing-slow-search-results-youtube-cache-optimization",
+  title:
+    "Fixing Slow Search Results: How We Eliminated a Critical YouTube Cache Bottleneck",
+  excerpt:
+    "Users were dropping off before adding songs due to slow search results. Here’s how we identified a hidden bottleneck and reduced perceived latency from nearly a second to instant feedback.",
+  content: `
+## The Hidden Problem Killing User Engagement
+
+At first glance, everything seemed to be working.
+
+Users were signing up, creating sessions, and exploring the platform. But one critical action was missing:
+
+> **No one was adding songs to the queue.**
+
+That’s a major issue for a collaborative music platform.
+
+If users don’t add songs, they never experience the core value of the product.
+
+So we dug deeper.
+
+---
+
+## Where Users Were Dropping Off
+
+We discovered a clear pattern:
+
+- Users searched for songs  
+- The system took too long to respond  
+- Users abandoned the process  
+
+The root cause? **Slow search result delivery when the cache missed.**
+
+Whenever a searched video wasn’t already in our database, the system had to:
+
+1. Call the YouTube API  
+2. Process the response  
+3. Store results in the cache  
+4. Reload the cache  
+5. Finally display results  
+
+This meant users had to wait far longer than expected—often **500ms to over 1 second**, even though the YouTube API itself responded in about **200ms**.
+
+In modern UX terms, that delay is unacceptable.
+
+---
+
+## The Real Bottleneck (And Why It Was Subtle)
+
+The issue wasn’t the API.
+
+It was **our own cache logic**.
+
+We were doing something fundamentally wrong:
+
+> We made users wait for backend optimizations that were only meant for future performance.
+
+Specifically:
+- 5 sequential POST requests (one per video)
+- Each taking ~50–100ms
+- Followed by a full cache reload
+
+All of this happened **before showing results to the user**.
+
+This is a classic mistake: putting non-critical operations on the critical path.
+
+---
+
+## The Fix: Instant Rendering, Background Processing
+
+The solution was simple in concept—but powerful in impact:
+
+> **Show results immediately. Handle everything else in the background.**
+
+### What We Changed
+
+- Removed sequential cache writes  
+- Executed all cache writes in parallel  
+- Moved cache updates off the critical path  
+- Rendered search results immediately after API response  
+
+Instead of this:
+
+\`\`\`
+API → cache writes → reload cache → show results
+\`\`\`
+
+We now do this:
+
+\`\`\`
+API → show results immediately  
+     → cache writes (parallel, background)  
+     → cache reload (afterwards)
+\`\`\`
+
+---
+
+## The Performance Impact
+
+The difference was dramatic.
+
+### Before:
+- ~200ms (API)
+- + 250–500ms (sequential cache writes)
+- + additional delay from cache reload  
+→ **Total: up to 1 second+**
+
+### After:
+- ~200ms (API only visible to user)  
+→ **Results feel instant**
+
+Meanwhile:
+- Cache still updates correctly  
+- Writes are ~5x faster (parallelized)  
+- Future searches remain optimized  
+
+---
+
+## Why This Matters More Than You Think
+
+This wasn’t just a technical improvement.
+
+It directly impacted **user behavior**.
+
+Before:
+- Users experienced friction  
+- They abandoned the search  
+- They never added songs  
+
+After:
+- Search feels fast and responsive  
+- Users stay engaged  
+- The core feature becomes usable  
+
+This is a key lesson:
+
+> **Performance isn’t just about speed—it’s about enabling user actions.**
+
+---
+
+## The Bigger UX Lesson
+
+There’s a fundamental rule in modern application design:
+
+> **Never block the user for work they don’t care about.**
+
+Caching is important—but users don’t care about it.
+
+They care about:
+- Seeing results instantly  
+- Adding songs quickly  
+- Enjoying the experience  
+
+Everything else should happen behind the scenes.
+
+---
+
+## What We Didn’t Change (On Purpose)
+
+Not every delay is bad.
+
+We intentionally kept:
+
+- A 300ms input debounce  
+  → prevents excessive API calls  
+- Background cache refresh logic  
+  → keeps future searches fast  
+- AI suggestions running after results  
+  → enhances experience without blocking  
+
+Optimization is about **balance**, not blindly removing delays.
+
+---
+
+## From Bottleneck to Breakthrough
+
+Fixing this issue unlocked a critical part of the product:
+
+> Users can now actually add songs to the queue.
+
+That single improvement transforms the platform from:
+- “Interesting idea”  
+to  
+- **“Actually usable product”**
+
+---
+
+## Final Thoughts
+
+Small technical decisions can have massive product impact.
+
+A few misplaced \`await\` statements created a bottleneck that prevented users from experiencing the core value of the platform.
+
+By rethinking the flow and prioritizing user experience, we turned a slow, frustrating interaction into an instant and engaging one.
+
+---
+
+## Ready to Experience It Yourself?
+
+Search, add songs, and build your queue—without waiting.
+
+**Try the tool now** and see how fast collaborative music can feel when performance is done right.
+  `,
+  date: "2025-08-27",
+  author: "TuneVote Team",
+  readTime: "6 min read",
+},
+  {
     slug: "2026-04-end-to-end-analytics-search-funnel",
     title:
       "How to Implement End-to-End Analytics for Your Search Funnel (And Actually Understand User Behavior)",
