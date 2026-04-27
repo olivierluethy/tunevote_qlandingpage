@@ -11,7 +11,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-      slug: "2025-08-fixing-slow-search-results-youtube-cache-optimization",
+      slug: "2026-04-fixing-slow-search-results-youtube-cache-optimization",
   title:
     "Fixing Slow Search Results: How We Eliminated a Critical YouTube Cache Bottleneck",
   excerpt:
@@ -213,7 +213,7 @@ Search, add songs, and build your queue—without waiting.
 
 **Try the tool now** and see how fast collaborative music can feel when performance is done right.
   `,
-  date: "2025-08-27",
+  date: "2026-04-27",
   author: "TuneVote Team",
   readTime: "6 min read",
 },
