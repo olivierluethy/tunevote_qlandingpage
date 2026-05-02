@@ -11,6 +11,150 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+      slug: "2026-05-building-a-bug-free-user-experience-audio-fix",
+  title:
+    "Why Small UX Bugs Matter: Fixing Audio Behavior for a Seamless Music Experience",
+  excerpt:
+    "A small audio bug revealed a bigger lesson: even minor UX inconsistencies can break user trust. Here’s how we fixed it—and what it taught us about building better products.",
+  content: `
+## Building a Reliable User Experience
+
+As our platform grows, one priority becomes increasingly important:
+
+> Creating a stable, predictable, and error-free environment for users.
+
+While major features often get the spotlight, it’s the small details that define whether an experience feels polished—or frustrating.
+
+---
+
+## The Subtle Audio Bug
+
+We encountered a seemingly minor issue:
+
+- A user mutes the session  
+- The current song stops playing sound (as expected)  
+- But when the next song starts…  
+- **The audio suddenly plays again**
+
+In other words:
+
+> The mute state was not being preserved across songs.
+
+At first glance, this didn’t seem critical. The core functionality still worked. Music played, sessions ran, and users could interact with the platform.
+
+But there was a problem.
+
+---
+
+## Why This Was More Important Than It Seemed
+
+Even small inconsistencies like this can break trust.
+
+From a user’s perspective:
+- Muting should mean *muted*—not temporarily, but consistently  
+- Unexpected sound can feel disruptive, especially in shared environments  
+- It creates a sense that the system is unreliable  
+
+These are the kinds of details users may not consciously think about—but they absolutely feel them.
+
+---
+
+## The Fix
+
+We decided to address the issue properly.
+
+The goal was simple:
+
+> Ensure that user-defined states (like mute) persist reliably across all transitions.
+
+After implementing the fix:
+- The mute state now carries over between songs  
+- Audio behavior is consistent and predictable  
+- Users remain in full control of their listening experience  
+
+A small change—but a meaningful one.
+
+---
+
+## The Bigger Lesson: What Really Matters to Users
+
+This bug led us to reflect on something deeper:
+
+> Not every issue is equally important—but some “small” ones matter more than expected.
+
+As builders, it’s easy to focus on:
+- New features  
+- Performance improvements  
+- Technical complexity  
+
+But users care about something else:
+
+- **Consistency**
+- **Control**
+- **Trust**
+
+This means we have to constantly evaluate:
+
+- What do users actually notice?  
+- What impacts their experience the most?  
+- Which improvements truly increase perceived quality?  
+
+---
+
+## Prioritization Is Everything
+
+We’ll be honest:
+
+This wasn’t the most critical issue in our system.
+
+But it affected how the product *felt*.
+
+And that matters.
+
+Because in the end:
+
+> A great product isn’t just functional—it feels right.
+
+---
+
+## Continuous Improvement, One Detail at a Time
+
+Fixing this audio behavior is part of a bigger effort:
+
+- Reducing friction  
+- Eliminating inconsistencies  
+- Creating a smooth, reliable experience  
+
+Each improvement—no matter how small—brings us closer to that goal.
+
+---
+
+## Final Thoughts
+
+Users may not always report small bugs.
+
+But they notice them.
+
+And over time, those small details shape whether they trust and enjoy your product.
+
+That’s why we’re committed to refining not just the big features—but also the subtle interactions that make everything feel seamless.
+
+---
+
+## Try the Improved Experience
+
+We’ve made the experience smoother, more predictable, and more user-friendly.
+
+Now it’s your turn to try it.
+
+**Start a session, play music, and experience the difference yourself.**  
+Everything just works—exactly how you expect it to.
+  `,
+  date: "2026-05-02",
+  author: "TuneVote Team",
+  readTime: "4 min read",
+},
+  {
      slug: "2026-05-database-cleanup-user-growth-insights",  title:    "What We Learned from Cleaning Up Our Database as User Growth Increased",  excerpt:    "As our user base started growing, our database became messy and hard to understand. Here’s how cleaning it up revealed real insights about user behavior—and why it matters.",  content: `## Growth Brings New ChallengesAs our app continues to grow, something interesting started happening behind the scenes:> Our database grew—but so did the complexity.At first, we didn’t think much of it. In the early days, we honestly weren’t even sure if people would actively use the app. So our focus was on building features—not analyzing data.But as more users signed up and started interacting with the platform, one thing became clear:**We didn’t fully understand our own data anymore.**---## The Illusion of “No Activity”For a while, we believed that a key feature wasn’t being used:> Adding songs to the queue inside a session.From our perspective, it looked like nothing was happening.But that assumption turned out to be wrong.The real issue wasn’t user behavior—it was **how we interpreted our data**.---## The Real Problem: Lack of ClarityWhen we finally took a closer look at our database, we noticed several problems:- Data was unstructured and hard to navigate  - Important events weren’t clearly tracked  - Timestamps and relationships weren’t easy to interpret  - We lacked visibility into *when* and *how* actions occurred  For example:We hadn’t clearly tracked **when songs were added to sessions for playback**.This led to a misleading conclusion:It looked like users weren’t adding songs—when in reality, we simply weren’t seeing it properly.---## When Growth Exposes Weak FoundationsThis issue didn’t show up immediately.Why?Because in the beginning:- We had few or no users  - Data volume was low  - Manual inspection was still possible  But once we crossed even a small threshold—around a dozen users—the cracks started to show.> What works for 2 users often breaks at 20.And that’s exactly what happened.---## The Database CleanupWe decided to step back and fix the foundation.This meant:- Cleaning up inconsistent data structures  - Improving how events are stored and tracked  - Making relationships between entities clearer  - Ensuring key actions (like adding songs) are properly recorded  Yes, it took time.But it was one of the most valuable things we’ve done so far.---## The Real Value: Understanding User BehaviorAfter cleaning up the database, everything changed.Suddenly, we could clearly see:- When users join sessions  - When they search for songs  - When they actually add songs to the queue  - How they move through the product  And most importantly:> **Users were engaging more than we thought.**Our earlier assumption—that users weren’t adding songs—was simply incorrect.---## Why This Matters for Product DevelopmentIf your data is unclear, your decisions will be too.We almost optimized the wrong thing because we misunderstood what was happening.This experience reinforced a critical lesson:> **Good data structure is just as important as good features.**Without it, you’re building blind.---## A Small Milestone with Big ImpactIt might sound simple—“cleaning up the database”—but the impact is huge:- Better product decisions  - Clearer understanding of user behavior  - More confidence in what to improve next  What started as a technical cleanup turned into a **strategic advantage**.---## Final ThoughtsEarly-stage products often underestimate the importance of clean, structured data.We did too.But as soon as real users start interacting with your app, everything changes. Assumptions are no longer enough—you need clarity.And that clarity comes from your data.---## Ready to Be Part of the Journey?We’re continuously improving—not just the features you see, but also the systems behind them.Now that we truly understand how users interact with the platform, we can make the experience smoother, faster, and more intuitive.**Try the tool today**, create a session, and see how easy it is to search, add songs, and collaborate in real time.Your experience helps shape what we build next.  `,  date: "2026-05-01",  author: "TuneVote Team",  readTime: "5 min read",},
   {
       slug: "2026-04-fixing-slow-search-results-youtube-cache-optimization",
