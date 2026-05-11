@@ -11,6 +11,349 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+      slug: "2026-05-understanding-user-perception-and-ui-confusion",
+  title:
+    "When Users Don’t Understand Your App: The UI Challenge We’re Facing Right Now",
+  excerpt:
+    "Some users interact with our app as if they don’t fully understand what it does. Here’s why we’re now heavily focusing on UI clarity, onboarding, and user perception.",
+  content: `
+## A New Problem Emerged
+
+As more people started using our app, we noticed something unexpected:
+
+> Some users interact with the platform without really understanding what it is or how it’s supposed to work.
+
+At first, this was frustrating.
+
+But then we realized:
+This isn’t necessarily a user problem.
+
+It’s a UI and communication problem.
+
+---
+
+## The Gap Between Vision and Perception
+
+As developers, we know exactly what the app is designed for:
+- Collaborative music sessions  
+- Real-time song voting  
+- Shared queue management  
+- Democratic playlist building  
+
+But users don’t automatically understand that.
+
+Especially first-time users.
+
+For them, the experience can feel unfamiliar or unclear if the interface doesn’t guide them properly from the very first seconds.
+
+---
+
+## Why First Impressions Matter So Much
+
+Modern users decide incredibly fast whether an app “makes sense” to them.
+
+If the interface:
+- Feels confusing  
+- Lacks clarity  
+- Doesn’t explain itself naturally  
+- Overwhelms the user  
+
+…many people simply stop engaging.
+
+Not because the product is bad—but because the onboarding experience creates uncertainty.
+
+---
+
+## The Realization We Had This Week
+
+This week made one thing very clear:
+
+> We need to deeply rethink how users perceive and understand the UI.
+
+Not just visually.
+
+But psychologically.
+
+We need to understand:
+- What users expect when they open the app  
+- What immediately catches their attention  
+- Which actions feel intuitive  
+- Which parts create hesitation or confusion  
+
+Because if users don’t understand the flow, they’ll never experience the real value of the platform.
+
+---
+
+## UI Is Communication
+
+A good interface silently explains itself.
+
+The best products don’t require long tutorials or instructions.
+
+Instead, the UI naturally answers questions like:
+- What can I do here?  
+- What should I click first?  
+- What happens next?  
+- Why is this useful for me?  
+
+If users are unsure about those basics, friction increases immediately.
+
+---
+
+## Looking at the Product Through the User’s Eyes
+
+One of the hardest parts of product development is this:
+
+> Stepping out of the developer mindset.
+
+We already know:
+- The features  
+- The logic  
+- The workflows  
+- The technical architecture  
+
+But users see none of that.
+
+They only see:
+- Buttons  
+- Text  
+- Layouts  
+- Reactions  
+
+That’s why we’re now investing much more time into understanding real user perception.
+
+---
+
+## What We’re Focusing on Next
+
+Over the coming days and weeks, our focus will heavily shift toward:
+- UI simplification  
+- Better onboarding  
+- Clearer interaction flows  
+- More intuitive design decisions  
+- Reducing confusion and uncertainty  
+
+This doesn’t necessarily mean rebuilding everything.
+
+Sometimes small UI adjustments create massive improvements in usability.
+
+---
+
+## Why This Matters for Growth
+
+A product can have:
+- Great technology  
+- Strong performance  
+- Powerful features  
+
+But if users don’t immediately understand how to use it comfortably, growth becomes difficult.
+
+That’s why UI and UX are becoming some of our highest priorities moving forward.
+
+Because ultimately:
+
+> Simplicity wins.
+
+---
+
+## Final Thoughts
+
+This week was an important reminder that building software isn’t just about engineering.
+
+It’s about understanding people.
+
+The more users we get, the more clearly we see where confusion exists—and where we need to improve.
+
+And honestly, that’s a good thing.
+
+Because every confusing interaction we identify is another opportunity to make the product better.
+
+---
+
+## Help Shape the Experience
+
+The platform is evolving rapidly, and every user interaction teaches us something new.
+
+**Try the tool yourself**, create a session, explore the interface, and experience how collaborative music voting works in real time.
+
+Your behavior and feedback help us build a simpler and more intuitive experience for everyone.
+  `,
+  date: "2026-05-13",
+  author: "TuneVote Team",
+  readTime: "5 min read",
+},
+  {
+      slug: "2026-05-the-real-ui-challenge-understanding-users",
+  title:
+    "The Hardest Part of Building an App? Understanding How Users Actually Think",
+  excerpt:
+    "Performance and features matter—but understanding user behavior is the real challenge. Here’s what we’re learning about UI, analytics, and the limits of tracking.",
+  content: `
+## The Challenge We Didn’t Expect
+
+Building features is hard.
+
+Scaling infrastructure is hard.
+
+But the real challenge turned out to be something else entirely:
+
+> Understanding how users actually think.
+
+As developers, it’s easy to build interfaces based on our own assumptions. We know how the system works internally, so everything feels logical to us.
+
+But users don’t see the product the way we do.
+
+And that changes everything.
+
+---
+
+## The UI Problem Is More Psychological Than Technical
+
+A user interface isn’t just buttons and layouts.
+
+It’s:
+- Expectations  
+- Habits  
+- Intuition  
+- Emotions  
+- Decision-making behavior  
+
+The difficult part is understanding:
+- How users expect something to work  
+- What feels natural to them  
+- What confuses them immediately  
+- What they ignore completely  
+
+And often, users won’t tell you directly.
+
+They simply leave.
+
+---
+
+## Why Developer Perspective Can Be Dangerous
+
+One of the biggest mistakes product teams make is this:
+
+> Designing for themselves instead of for real users.
+
+As creators of the platform, we already know:
+- Where everything is  
+- What every button does  
+- How the flows are intended to work  
+
+But first-time users don’t have that context.
+
+That means even “obvious” interfaces can become confusing in practice.
+
+---
+
+## Tracking Helps—But It Has Limits
+
+To better understand user behavior, we track a lot of interactions inside the platform:
+- Searches  
+- Session creation  
+- Queue actions  
+- Click behavior  
+- Flow progression  
+
+This data helps us identify:
+- Where users hesitate  
+- Where they leave  
+- Which actions succeed  
+- Which parts create friction  
+
+But there’s another challenge:
+
+> Tracking is no longer as reliable as it used to be.
+
+---
+
+## The Adblocker Problem
+
+Modern privacy tools and adblockers increasingly interfere with analytics and tracking systems.
+
+That means:
+- Some user actions never get recorded  
+- Session behavior becomes incomplete  
+- Funnels become harder to interpret  
+- Important insights can disappear entirely  
+
+This creates a difficult situation:
+We want to improve the product experience—but we can only optimize what we can actually observe.
+
+---
+
+## Building Better UX Requires Empathy
+
+The biggest lesson we’re learning is this:
+
+> Good UI design starts with empathy, not code.
+
+We constantly have to ask ourselves:
+- What would a new user expect here?  
+- Is this truly intuitive—or only intuitive to us?  
+- What creates uncertainty?  
+- What slows people down?  
+
+Because ultimately:
+Users don’t care how technically advanced something is if it feels confusing to use.
+
+---
+
+## The Continuous Process of Improvement
+
+Understanding users is not a one-time task.
+
+It’s an ongoing process of:
+- Observing behavior  
+- Testing assumptions  
+- Improving flows  
+- Simplifying interactions  
+- Removing friction wherever possible  
+
+The UI is never “finished.”
+
+It evolves alongside the users.
+
+---
+
+## Why This Matters So Much
+
+A fast backend and powerful features are important.
+
+But if users don’t understand how to use the product comfortably and naturally, none of that matters.
+
+That’s why UI and UX are now among our highest priorities moving forward.
+
+Not because they look good—but because they directly determine whether users stay or leave.
+
+---
+
+## Final Thoughts
+
+The deeper we go into product development, the clearer one thing becomes:
+
+> Building technology is easier than understanding people.
+
+And yet, understanding people is exactly what creates truly great products.
+
+We’ll continue refining the interface, learning from behavior, and improving the experience step by step.
+
+Because every smoother interaction makes the platform better for everyone.
+
+---
+
+## Experience the Platform Yourself
+
+We’re continuously improving the experience based on real user behavior and real-world usage.
+
+**Try the tool today**, create a session, search for songs, and experience how collaborative music voting is evolving with every improvement we make.
+  `,
+  date: "2026-05-06",
+  author: "TuneVote Team",
+  readTime: "5 min read",
+},
+  {
       slug: "2026-05-growing-user-base-content-strategy-blog-traffic",
   title:
     "How Our Blog Strategy Is Driving Real User Growth (Backed by Data)",
