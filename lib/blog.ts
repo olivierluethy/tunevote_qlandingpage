@@ -11,6 +11,178 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+      slug: "2026-05-user-growth-without-retention-the-next-big-challenge",
+  title:
+    "More Users, But Few Returning Ones: The Retention Challenge We’re Facing",
+  excerpt:
+    "Our user numbers are growing steadily, but recurring users are still rare. Here’s what we’re learning about growth, retention, and the difficult decision between waiting and redesigning.",
+  content: `
+## The User Growth Is Real
+
+Over the past weeks, one thing has become increasingly clear:
+
+> More and more people are discovering and using our app.
+
+This is exciting for us because it confirms something important:
+The platform is attracting genuine interest.
+
+People are signing up, exploring sessions, and interacting with the product more frequently than before.
+
+That’s real progress.
+
+---
+
+## But There’s Another Side to the Story
+
+While user growth is increasing, we’ve noticed another important pattern:
+
+> We still have relatively few returning users.
+
+In other words:
+People try the app—but many don’t come back consistently yet.
+
+This creates one of the biggest questions any growing product faces:
+
+- Is the current experience not strong enough yet?
+- Are users simply testing the platform out of curiosity?
+- Or do we just need more time and visibility?
+
+Right now, the answer isn’t fully clear.
+
+---
+
+## Growth Without Major Public Exposure
+
+What makes this especially interesting is that we’re still not widely visible publicly.
+
+We’re:
+- Barely mentioned in news platforms
+- Not heavily promoted yet
+- Still relatively early in terms of awareness
+
+And yet, user growth continues steadily.
+
+That’s encouraging.
+
+It suggests there’s real interest in the concept itself.
+
+---
+
+## The Big Internal Debate
+
+This leads us to an important strategic discussion:
+
+> Should we wait and observe longer—or start making major UI improvements right now?
+
+On one side:
+- More data over time could give clearer insights
+- User behavior patterns may stabilize naturally
+- Retention might improve as awareness grows
+
+On the other side:
+- UI friction may already be limiting retention
+- Early confusion could prevent users from returning
+- Improving quality now could accelerate long-term growth
+
+This is one of the hardest balancing acts in product development.
+
+---
+
+## Why Retention Matters More Than Raw Growth
+
+Getting users is important.
+
+But sustainable products are built on:
+- Returning users
+- Habit formation
+- Consistent engagement
+
+A user who comes back repeatedly is far more valuable than dozens who only visit once.
+
+That’s why retention is becoming one of our biggest focus areas moving forward.
+
+---
+
+## Looking Beyond the Numbers
+
+Metrics alone don’t tell the full story.
+
+We also need to understand:
+- How users emotionally experience the platform
+- Whether the interface feels intuitive
+- If the core value becomes obvious quickly enough
+- What prevents users from forming a habit
+
+Because often, users don’t leave because a product is bad.
+
+They leave because:
+- It feels unclear
+- The value isn’t immediately obvious
+- The experience creates too much friction
+
+---
+
+## The UI Question Keeps Returning
+
+More and more, we’re realizing that UI and UX may be the defining factors for the next stage of growth.
+
+Not necessarily because the system lacks functionality—but because:
+> Simplicity and clarity determine whether users return.
+
+This means we’ll continue evaluating:
+- Navigation flows
+- Session interaction
+- Song queue behavior
+- Onboarding experience
+- Overall interface clarity
+
+Every small improvement can potentially increase retention dramatically.
+
+---
+
+## The Reality of Early-Stage Product Development
+
+One of the most difficult things about building a product is uncertainty.
+
+Sometimes:
+- You need patience
+- Sometimes you need aggressive iteration
+- And often, you don’t immediately know which one is correct
+
+That’s exactly where we are right now.
+
+But that’s also what makes this stage exciting.
+
+---
+
+## Final Thoughts
+
+The growth we’re seeing is motivating.
+
+It proves people are interested in the platform and willing to try it.
+
+Now the next challenge begins:
+Turning first-time visitors into returning users who genuinely enjoy using the product regularly.
+
+Whether that requires patience, UI redesigns, or both—we’re committed to figuring it out.
+
+And we’ll continue improving every step of the way.
+
+---
+
+## Join the Journey Early
+
+The platform is evolving rapidly, and every new user helps shape its future.
+
+**Try the tool today**, create a session, add songs, and experience collaborative music voting for yourself.
+
+And who knows—you might become one of the first returning users helping define the next phase of growth.
+  `,
+  date: "2026-05-18",
+  author: "TuneVote Team",
+  readTime: "5 min read",
+},
+  {
       slug: "2026-05-understanding-user-perception-and-ui-confusion",
   title:
     "When Users Don’t Understand Your App: The UI Challenge We’re Facing Right Now",
