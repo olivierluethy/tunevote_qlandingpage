@@ -354,6 +354,181 @@ Your behavior and feedback help us build a simpler and more intuitive experience
   author: "TuneVote Team",
   readTime: "5 min read",
 },
+{
+  slug: "2026-05-why-redesigning-the-session-experience-became-critical",
+  title:
+    "Why Redesigning the Session Experience Became a Critical Priority",
+  excerpt:
+    "Users were signing up and creating sessions—but many never added songs or stayed engaged. Here’s why redesigning the session experience became one of our biggest priorities.",
+  content: `
+## Signups Were Growing—But Something Was Missing
+
+Over time, we started seeing encouraging growth:
+- More registrations
+- More created sessions
+- More users exploring the platform
+
+At first glance, everything looked positive.
+
+But when we analyzed user behavior more closely, we discovered a major issue:
+
+> Creating a session did not automatically lead to meaningful engagement.
+
+Many users stopped before the most important moment:
+Adding songs and actually listening together.
+
+---
+
+## The Critical Missing Step
+
+For a collaborative music platform, the true value only begins when users:
+- Add songs to the queue
+- Start playback
+- Stay engaged for longer periods of time
+- Experience real collaborative listening
+
+Without that, the product remains incomplete from the user’s perspective.
+
+And that’s exactly the challenge we encountered.
+
+---
+
+## Why the Session UI Became So Important
+
+The session page is the heart of the platform.
+
+It’s where:
+- Music discovery happens
+- Queue interaction happens
+- Collaboration happens
+- The actual product experience happens
+
+So if users enter a session but don’t continue engaging, the problem often isn’t the concept itself.
+
+It’s the experience.
+
+---
+
+## Understanding the Friction
+
+We realized there were several possible reasons why users stopped early:
+- The interface wasn’t intuitive enough
+- The next action wasn’t obvious
+- Users didn’t immediately understand the flow
+- The experience lacked momentum after session creation
+
+In other words:
+
+> The session experience needed to guide users more naturally toward action.
+
+---
+
+## Why Long-Term Engagement Matters
+
+A user adding one song is good.
+
+But the real goal is much bigger:
+- Multiple songs added
+- Long listening sessions
+- Continuous interaction
+- Shared participation with others
+
+That’s where collaborative music becomes truly fun and valuable.
+
+And currently, that’s the behavior we want to encourage much more effectively.
+
+---
+
+## Redesigning with User Behavior in Mind
+
+Because of these insights, redesigning the session experience became a critical focus area.
+
+Not just visually.
+
+But structurally.
+
+We started asking ourselves:
+- What should users see first?
+- Which actions should feel most obvious?
+- How can we reduce hesitation?
+- How can we encourage immediate interaction?
+
+The goal is simple:
+
+> Make participation feel effortless.
+
+---
+
+## The Difference Between Access and Engagement
+
+One of the biggest lessons we’re learning is this:
+
+> Getting users into the app is not the same as getting them engaged.
+
+Signups alone don’t create a successful product.
+
+Real success comes when users:
+- Stay longer
+- Interact naturally
+- Return repeatedly
+- Enjoy the experience enough to use it again
+
+That’s why improving the session flow matters so much.
+
+---
+
+## Building for Real Usage
+
+As developers, it’s easy to focus on functionality:
+- Does the feature technically work?
+- Is the backend stable?
+- Are sessions synchronized correctly?
+
+But users evaluate something different:
+- Does it feel intuitive?
+- Is it enjoyable?
+- Does it immediately make sense?
+
+That’s the layer we’re now heavily optimizing.
+
+---
+
+## The Road Ahead
+
+We’ll continue refining:
+- Session layouts
+- Interaction flows
+- Song search behavior
+- Queue visibility
+- Overall usability
+
+Every improvement is aimed at one thing:
+Helping users transition naturally from “trying the app” to actually experiencing collaborative music together.
+
+---
+
+## Final Thoughts
+
+This realization was a major turning point for us.
+
+The challenge is no longer just attracting users.
+
+It’s helping them fully experience the value of the platform once they arrive.
+
+And that starts with a better session experience.
+
+---
+
+## Experience the New Direction Yourself
+
+We’re continuously improving the session experience to make collaborative music simpler, smoother, and more engaging.
+
+**Create a session today**, add songs, invite others, and experience how shared music listening is evolving with every update we release.
+  `,
+  date: "2026-05-12",
+  author: "TuneVote Team",
+  readTime: "5 min read",
+},
   {
       slug: "2026-05-the-real-ui-challenge-understanding-users",
   title:
