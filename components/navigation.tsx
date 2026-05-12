@@ -46,6 +46,12 @@ export function Navigation() {
 
             <div className="hidden md:flex items-center gap-4">
               <Link
+                href="/contact"
+                className="px-4 py-2 text-muted-foreground hover:text-foreground font-semibold transition-colors"
+              >
+                Contact
+              </Link>
+              <Link
                 href="https://app.tunevote.com/dashboard"
                 onClick={handleStartSession}
                 className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 font-semibold text-white hover:shadow-lg hover:shadow-purple-500/40 transition-all"
@@ -79,6 +85,13 @@ export function Navigation() {
               className="md:hidden bg-background/95 backdrop-blur-lg border-t border-border"
             >
               <div className="px-4 py-4 flex flex-col gap-3">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="px-4 py-2 text-muted-foreground hover:text-foreground font-semibold text-center"
+                >
+                  Contact
+                </Link>
                 <Link
                   href="https://app.tunevote.com/dashboard"
                   onClick={() => {

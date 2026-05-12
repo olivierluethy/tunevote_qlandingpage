@@ -37,11 +37,11 @@ export function Footer() {
               Start Session
             </Link>
             <Link
-  href="mailto:business.promptin@gmail.com"
-  className="text-muted-foreground hover:text-foreground transition-colors"
->
-  Contact
-</Link>
+              href="/contact"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Contact
+            </Link>
             <Link
               href="https://discord.gg/tunevote"
               className="text-muted-foreground hover:text-foreground transition-colors"
